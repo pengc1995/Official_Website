@@ -8,6 +8,7 @@ import axios from 'axios';
 import './JoinUs.component.style.css';
 
 import GlobalArea from './areadata';
+import SuccessModal from '../modal/successModal.component'
 
 class JoinUs extends React.Component  {
     constructor(){
@@ -18,6 +19,7 @@ class JoinUs extends React.Component  {
         this.GetAreaStageChange=this.GetAreaStageChange.bind(this);
         this.handleCheckbox = this.handleCheckbox.bind(this);
         this.updateflag = this.updateflag.bind(this);
+        this.GetVisibility=this.GetVisibility.bind(this);
         this.state ={
             DriverID: 0,
             Area: 'Great Vancouver',
@@ -33,10 +35,24 @@ class JoinUs extends React.Component  {
             DesiredArea:[],
             Transportation:[],
             AvailableTime:[],
-            description:'',
+            description:'at least 10 words',
+            code:[],//this variable is used to store the vertification code
+            selectedFile : null,
+            modalVisible: false,
+            formVisible:true,
             flag: '',
         }
     }
+    showModal = () => {
+        if( this.validator.allValid() ){
+            this.setState({
+                modalVisible: true,
+              });
+        }
+        // this.setState({
+        //   modalVisible: true,
+        // });
+      };
     
     GetTowns= ()=> {
         switch(this.state.Area){
@@ -100,7 +116,7 @@ class JoinUs extends React.Component  {
     
     handleSubmit = async event =>{
         if( this.validator.allValid() ){
-            alert('You submitted the form and stuff!');
+            this.props.getformVisibility(false)
         } else {
             this.validator.showMessages();
             this.forceUpdate();
@@ -192,6 +208,7 @@ class JoinUs extends React.Component  {
         .catch(function(error){
             console.log(error);
         })
+        // alert('提交成功');
     };
     
     onChangeHandler = event => {
@@ -212,6 +229,9 @@ class JoinUs extends React.Component  {
 
     GetAreaStageChange(preferredArea){
         this.setState({DesiredArea:this.state.DesiredArea.concat(preferredArea)});
+    }
+    GetVisibility(visibility){
+        this.setState({modalVisible:visibility})
     }
 
     handleCheckbox = event => {
@@ -245,9 +265,19 @@ class JoinUs extends React.Component  {
         
         return(
             <div className='Form_input'>
+<<<<<<< HEAD
                 <p className='ft_driver_modal_title'>Become a driver</p>
                 <hr style={{'padding-bottom':'10px'}} />
                 
+=======
+                {this.state.formVisible?
+                  <div>
+                    <p className='ft_driver_modal_title'>Become a driver</p>
+                    <hr style={{'padding-bottom':'10px'}}/>
+                  </div>:null}
+             {
+               this.state.formVisible?
+>>>>>>> 7994fe0d629d8642a2310b17e80fae9d1d0e3ae4
                 <form className='JoinUs' onSubmit={this.handleSubmit}>
 
                     <span className='ft_driver_label'>Area</span><span className='ft_required_mark'>*</span>
@@ -419,9 +449,10 @@ class JoinUs extends React.Component  {
                     </div> 
                     <hr />
                     
-                    <button type='submit' className='ft_driver_submit_button'>Submit</button>       
-                    
-                </form>
+                    <button type='submit' onClick={this.showModal} className='ft_driver_submit_button'>Submit</button>
+                    {this.state.modalVisible?<SuccessModal getVisibility={this.GetVisibility}/>:null}       
+                </form>:null
+              }
             </div>
         );
     }
