@@ -23,6 +23,7 @@ class NewsroomDetail extends Component {
         console.log(this.props);
         const { newsdata } = this.state;
         const target_news = newsdata.find( data => data.id == this.state.current_id );
+        var content = target_news.content;
 
         return(
             <div>
@@ -44,7 +45,8 @@ class NewsroomDetail extends Component {
                         By {target_news.user}    |    {target_news.date}
                     </pre>
                     <hr className='fh_news_det_divider' />
-                    <p className='fh_news_det_content'>{target_news.content}</p> 
+                    <div className='fh_news_det_content' dangerouslySetInnerHTML = {{ __html:content }}></div>
+                    {/* <p className='fh_news_det_content'>{target_news.content}</p>  */}
                 </div>
                 <Footer />
             </div>

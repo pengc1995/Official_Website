@@ -37,8 +37,8 @@ class JoinUsModal extends Component {
           width='597px'
         >
             <div className='ft_driver_body'>
-                <p className='ft_driver_modal_title'>Become a driver</p>
-                <hr style={{'padding-bottom':'10px'}} />
+                {/* <p className='ft_driver_modal_title'>Become a driver</p>
+                <hr style={{'padding-bottom':'10px'}} /> */}
                 <JoinUs />
                 <button onClick={this.handleCancel} className='ft_driver_cancle_button'>
                     Close

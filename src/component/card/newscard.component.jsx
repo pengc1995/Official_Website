@@ -19,7 +19,7 @@ class NewsCard extends Component {
                                 {this.props.date}
                             </h2>
                             <p className="ft_news_card_text" key={this.props.id}>
-                                <div dangerouslySetInnerHTML = {{ __html:content }}></div>
+                                <div style={{'font-size':'16px'}} dangerouslySetInnerHTML = {{ __html:content }}></div>
                             </p>
                         </div>
                     </div>

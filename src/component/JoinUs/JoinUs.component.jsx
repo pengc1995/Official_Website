@@ -62,9 +62,10 @@ class JoinUs extends React.Component  {
         const target = event.target;
         const value = target.value;
         const name = target.name;
-        this.setState({
-            [name]: value
-          },()=>{this.GetTowns()});
+        this.setState(
+            {[name]: value},
+            ()=>{this.GetTowns()},
+          );
 
     };
 
@@ -244,6 +245,8 @@ class JoinUs extends React.Component  {
         
         return(
             <div className='Form_input'>
+                <p className='ft_driver_modal_title'>Become a driver</p>
+                <hr style={{'padding-bottom':'10px'}} />
                 
                 <form className='JoinUs' onSubmit={this.handleSubmit}>
 

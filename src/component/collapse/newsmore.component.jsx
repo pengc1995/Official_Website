@@ -9,7 +9,8 @@ class NewsMore extends Component {
         super(props)
         this.state = {
             indexList: [],
-            totalNews: 11,
+            /* totalNews: 11, */
+            totalData: NewsData,
         };
     }
     
@@ -34,7 +35,7 @@ class NewsMore extends Component {
     //       });
         
     // }
-    componentDidMount() {
+    /* componentDidMount() {
         console.log('hdfy')
         axios({
             method: 'get' ,
@@ -50,6 +51,13 @@ class NewsMore extends Component {
         .catch((error) => {
             console.log(error);
           });
+    } */
+
+    componentWillMount(){
+        //设置总页数
+        this.setState({
+            indexList:this.timeSorting()
+        })
     }
 
     timeSorting() {
