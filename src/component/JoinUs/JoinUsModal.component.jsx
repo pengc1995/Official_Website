@@ -46,7 +46,11 @@ class JoinUsModal extends Component {
                 <JoinUs getformVisibility={this.getformVisibility}/>
                 <button onClick={this.handleCancel} className='ft_driver_cancle_button'>
                     Close
+<<<<<<< HEAD
                 </button> 
+=======
+                </button>
+>>>>>>> 30762a1e16c7de042de4942ce5740d0a06a77ebb
             </div>
         </Modal>
       </div>
