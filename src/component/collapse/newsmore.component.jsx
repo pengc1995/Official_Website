@@ -9,8 +9,7 @@ class NewsMore extends Component {
         super(props)
         this.state = {
             indexList: [],
-            /* totalNews: 11, */
-            totalData: NewsData,
+            totalNews: NewsData.length,
         };
     }
     
@@ -53,10 +52,9 @@ class NewsMore extends Component {
           });
     } */
 
-    componentWillMount(){
-        //设置总页数
+    componentWillMount() {
         this.setState({
-            indexList:this.timeSorting()
+            indexList: this.timeSorting()
         })
     }
 
@@ -75,8 +73,7 @@ class NewsMore extends Component {
                 <p className='fh_news_title_contact'>Advertising information please contact us pr@fantuan.ca</p>
 
                 <div className='fh_news_cardgroup'>
-                    {
-                        
+                    {                       
                         this.state.indexList.slice(0,9).map(({ ...otherCollectionProps }) => (
                             <NewsCard { ...otherCollectionProps } />
                         ))

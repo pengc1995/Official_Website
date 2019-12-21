@@ -37,6 +37,7 @@ class RecruitmentDetail extends Component  {
         return(
             <div>
                 <Header /> 
+                <div className='ft-career-container-bg'>
                 <div className='container'>
                     <div className="fh_rec_det_path">
                         <Link className='path_option' to="/">Home</Link>
@@ -62,7 +63,8 @@ class RecruitmentDetail extends Component  {
                                 <List data={requirementData} {...requirementrest} />
                             </div>
                         </div>
-                    </div>    
+                    </div>
+                </div>    
                 </div>  
 
                 <Footer/>

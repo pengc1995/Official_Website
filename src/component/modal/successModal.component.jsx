@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Modal, Button } from 'antd';
+import { Modal } from 'antd';
 
 import './successModal.component.style.css';
 
@@ -14,15 +14,11 @@ class SuccessModal extends Component {
   render() {
     return (
       <div>
-        {/* <Button onClick={this.showModal} className='s_modal_button' 
-                style={{height:'54px', background:'rgba(6,34,54,1)', 'font-size':'16px'}}
-        >
-          Submit
-        </Button> */}
         <Modal
           visible={true}
           onOk={this.handleOk}
           onCancel={this.handleCancel}
+          closable={false}
           footer={ null }
           width='597px'
         >

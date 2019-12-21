@@ -2,13 +2,13 @@ import React from 'react';
 import VerificationCode from '../verificationcode/verification/verification.component';
 import AreaCheckBox from './areacheckbox.component';
 import ReactValidator from './react-validator';
+import SuccessModal from '../modal/successModal.component';
 import { Input, Checkbox } from 'antd';
 import axios from 'axios';
 
 import './JoinUs.component.style.css';
 
 import GlobalArea from './areadata';
-import SuccessModal from '../modal/successModal.component'
 
 class JoinUs extends React.Component  {
     constructor(){
@@ -35,9 +35,7 @@ class JoinUs extends React.Component  {
             DesiredArea:[],
             Transportation:[],
             AvailableTime:[],
-            description:'at least 10 words',
-            code:[],//this variable is used to store the vertification code
-            selectedFile : null,
+            description:'',
             modalVisible: false,
             formVisible:true,
             flag: '',
@@ -49,9 +47,6 @@ class JoinUs extends React.Component  {
                 modalVisible: true,
               });
         }
-        // this.setState({
-        //   modalVisible: true,
-        // });
       };
     
     GetTowns= ()=> {
@@ -210,12 +205,6 @@ class JoinUs extends React.Component  {
         })
         // alert('提交成功');
     };
-    
-    onChangeHandler = event => {
-        this.setState({
-            selectedFile: event.target.files[0] 
-        })
-    }
 
     handleChange = async event => {
         //event.target will end up being the input element itself. And we want to pull off the 'name and value'
@@ -230,6 +219,7 @@ class JoinUs extends React.Component  {
     GetAreaStageChange(preferredArea){
         this.setState({DesiredArea:this.state.DesiredArea.concat(preferredArea)});
     }
+    
     GetVisibility(visibility){
         this.setState({modalVisible:visibility})
     }
@@ -265,11 +255,6 @@ class JoinUs extends React.Component  {
         
         return(
             <div className='Form_input'>
-<<<<<<< HEAD
-                <p className='ft_driver_modal_title'>Become a driver</p>
-                <hr style={{'padding-bottom':'10px'}} />
-                
-=======
                 {this.state.formVisible?
                   <div>
                     <p className='ft_driver_modal_title'>Become a driver</p>
@@ -277,7 +262,6 @@ class JoinUs extends React.Component  {
                   </div>:null}
              {
                this.state.formVisible?
->>>>>>> 7994fe0d629d8642a2310b17e80fae9d1d0e3ae4
                 <form className='JoinUs' onSubmit={this.handleSubmit}>
 
                     <span className='ft_driver_label'>Area</span><span className='ft_required_mark'>*</span>
@@ -308,11 +292,11 @@ class JoinUs extends React.Component  {
                         <div className='ft_driver_single_row'>
                             <div>
                                 <Input style={{'width':'242px', margin: '10px 0 0 0'}} name='First_Name' value={First_Name} onChange={this.handleChange} size='large' placeholder='First Name' />
-                                {this.validator.message('First Name', this.state.First_Name, 'required','',{})}
+                                {this.validator.message('First Name', this.state.First_Name, 'required','',{})} 
                             </div>
                             <div>
                                 <Input style={{'width':'242px', margin: '10px 0 0 0'}} name='Last_Name' value={Last_Name} onChange={this.handleChange} size='large' placeholder='Last Name' />
-                                {this.validator.message('Last Name', this.state.Last_Name, 'required','',{})} 
+                                {this.validator.message('Last Name', this.state.Last_Name, 'required','',{})}
                             </div>
                         </div>
 
@@ -320,7 +304,7 @@ class JoinUs extends React.Component  {
 
                     <span className='ft_driver_label'>Phone</span><span className='ft_required_mark'>*</span>
                         <Input style={{'max-width':'497px', margin: '10px 0 0 0'}} name='Mobile' value={Mobile} onChange={this.handleChange} size='large' placeholder='Phone Number' />
-                        {this.validator.message('Mobile', this.state.Mobile, 'required|phone','',{})}
+                        {this.validator.message('Mobile', this.state.Mobile, 'required|phone','',{})} 
                     <div style={{padding: '0 0 35px 0'}} />
 
                     <span className='ft_driver_label'>Address</span><span className='ft_required_mark'>*</span>
@@ -329,11 +313,11 @@ class JoinUs extends React.Component  {
                         <div className='ft_driver_single_row'>
                             <div>
                                 <Input style={{'max-width':'242px', margin: '13px 0 0 0'}} name='City' value={City} onChange={this.handleChange} size='large' placeholder='City' />
-                                {this.validator.message('City', this.state.City, 'required','',{})}
+                               {this.validator.message('City', this.state.City, 'required','',{})}
                             </div>
                             <div>
                                 <Input style={{'max-width':'242px', margin: '13px 0 0 0'}} name='PostalCode' value={PostalCode} onChange={this.handleChange} size='large' placeholder='ZIP / Postal Code' />
-                                {this.validator.message('PostalCode', this.state.PostalCode, 'required','',{})}
+                               {this.validator.message('PostalCode', this.state.PostalCode, 'required','',{})}
                             </div>
                         </div>
 
@@ -349,9 +333,9 @@ class JoinUs extends React.Component  {
                                 ))
                             }
                         </div>
-                        {/* {this.validator.message('DesiredArea', this.state.DesiredArea, 'min:3','',{
+                        {/* {this.validator.message('DesiredArea', this.state.DesiredArea, 'min:1','',{
                                 min: 'Please at least choose 1 desired area',
-                        })} */}
+                        })}  */}
                     </div>
 
                     <div style={{padding:'9.5px 0'}} />
@@ -445,7 +429,7 @@ class JoinUs extends React.Component  {
                         <VerificationCode flagupdate={this.updateflag} />
                         {this.validator.message('Verification code', this.state.flag, 'required','',{
                             required:'Please input code correctly.'
-                        })}
+                        })} 
                     </div> 
                     <hr />
                     

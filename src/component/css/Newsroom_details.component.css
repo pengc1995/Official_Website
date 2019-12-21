@@ -3,6 +3,14 @@ p {
     padding: 0;
 }
 
+.ft-news-container-bg {
+    background-color: white;
+  }
+  
+  .ft-career-container-bg {
+    background-color: white;
+  }
+
 .fh_news_det_path {
     font-size:16px;
     font-family:OpenSans-Semibold,OpenSans;
@@ -10,7 +18,7 @@ p {
     line-height:22px;
 
     text-align: left;
-    padding: 65px 0 60px 0;
+    padding: 65px 0 48px 0;
 }
 .path_option {
     font-size: 16px;
@@ -32,7 +40,7 @@ p {
     
     text-align: left;
     margin: 0;
-    padding: 0 0 16px 0;
+    padding: 0 0 6px 0;
 }
 
 .fh_news_det_subtitle {
@@ -41,10 +49,13 @@ p {
     color:rgba(153,153,153,1);
     line-height:22px;
     text-align: left;
+
+    margin: 0;
+    padding: 0;
 }
 
 .fh_news_det_divider {
-    margin: 35px 0 57px 0;
+    margin: 26px 0 47px 0;
     border: 0;
     border-top: 1px solid #DEDEDE;
 }
@@ -52,4 +63,7 @@ p {
 .fh_news_det_content {
     max-width: 940px;
     margin: auto;
+    text-align: left;
+    
+    font-size: 18px;
 }

@@ -97,8 +97,7 @@ class SlideShow extends Component {
                 {...settings_2}
                 >
                     {
-                        this.state.indexList.slice(0,3).map((carousel, index) => (  
-
+                        this.state.indexList.slice(0, 3).map((carousel, index) => (  
                         <div>
                             <h3 className='fh_rec_carousel_title' key={index}>
                                 {carousel.title}
@@ -110,8 +109,7 @@ class SlideShow extends Component {
                         </div>
                         )
                         )
-                    }
-                    
+                    }                   
                 </Slider>
             </div>
         )

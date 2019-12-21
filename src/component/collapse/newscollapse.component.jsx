@@ -30,7 +30,7 @@ function NewsCollapse(props) {
           <div className='fh_news_cardgroup'>
           {
             restList.slice(9).map(({...otherCollectionProps}) => (
-              <NewsCard  {...otherCollectionProps} />
+              <NewsCard {...otherCollectionProps} />
           ))
           }
           </div>

@@ -1,6 +1,7 @@
 import React  from  'react';
 import VerificationCode from '../verificationcode/verification/verification.component'; 
-import ReactValidator from './react-validator'; 
+import ReactValidator from './react-validator';
+import SuccessModal from '../modal/successModal.component'; 
 import { Input }  from  'antd';
 import  axios  from  'axios';
 
@@ -22,9 +23,12 @@ class  PAForm  extends  React.Component    {
                 PostalCode:  '',
                 Category:  '',
                 Description:'',
+                modalVisible: false,
+                formVisible: true,
                 flag: '',
         }
         this.updateflag = this.updateflag.bind(this);
+        this.GetVisibility=this.GetVisibility.bind(this);
     }
 
     handleChange  =  async  event  =>  {
@@ -43,7 +47,7 @@ class  PAForm  extends  React.Component    {
 
     handleSubmit  =  async  event  =>{
         if( this.validator.allValid() ){
-            alert('You submitted the form and stuff!');
+            this.props.getformVisibility(false)
         } else {
             this.validator.showMessages();
             this.forceUpdate();
@@ -103,103 +107,123 @@ class  PAForm  extends  React.Component    {
         })
     }
 
+    showModal = () => {
+        if (this.validator.allValid()) {
+            this.setState({
+                modalVisible: true,
+            });
+        }
+    }
+
+    GetVisibility(visibility){
+        this.setState({modalVisible:visibility})
+    }
+
     render() {
         const { Area, First_Name, Last_Name, Mobile, Email, BName, Address, City, PostalCode, Category, Description, flag } = this.state;
         
         return(
             <div className='Form_input'>
-
-            <form onSubmit={this.handleSubmit}>
-
-                <span className='fh_partner_label'>Area</span><span className='ft_required_mark'>*</span>
-                <br/>
-                <select
-                    className='ft_partner_select'
-                    name='Area'
-                    value={Area}
-                    onChange={this.handleChange}
-                    style={{width: '242px', 
-                            background: 'white',
-                            margin: '10px 0 35px 0'
-                            }}
-                >
-                    <option value="Great Vancouver">Great Vancouver</option>
-                    <option value="Calgary">Calgary</option>
-                    <option value="Edmonton">Edmonton</option> 
-                    <option value="Montreal">Montreal</option>
-                    <option value="Toronto">Toronto</option> 
-                    <option value="Seattle">Seattle</option>
-                    <option value="New York">New York</option>
-                </select>
-                <br />
-                
-                <span className='fh_partner_label'>Name</span><span className='ft_required_mark'>*</span><br/>
-                    <div className='ft_partner_single_row'>
-                        <div>
-                            <Input style={{'width':'242px', margin: '10px 0 0 0'}} name='First_Name' value={First_Name} onChange={this.handleChange} placeholder='First Name' size='large'></Input>
-                            {this.validator.message('First Name', this.state.First_Name, 'required','',{})}
-                        </div>
-                        <div>
-                            <Input style={{'width':'242px', margin: '10px 0 0 0'}} name='Last_Name' value={Last_Name} onChange={this.handleChange} placeholder='Last Name' size='large'></Input>
-                            {this.validator.message('Last Name', this.state.Last_Name, 'required','',{})}
-                        </div>
-                    </div>
-                <div style={{padding: '0 0 35px 0'}} />
-                
-                <span className='fh_partner_label'>Phone</span><span className='ft_required_mark'>*</span><br/>
-                    <Input style={{'max-width':'497px', margin: '10px 0 0 0'}} name='Mobile' value={Mobile} onChange={this.handleChange} placeholder='Phone Number' size='large'></Input>
-                    {this.validator.message('Mobile', this.state.Mobile, 'required|phone','',{})}
-                <div style={{padding: '0 0 35px 0'}} />
-                
-                <span className='fh_partner_label'>Email</span><span className='ft_required_mark'>*</span><br/>
-                    <Input style={{'max-width':'497px', margin: '10px 0 0 0'}} name='Email' value={Email} onChange={this.handleChange} placeholder='Email Address' size='large'></Input>
-                    {this.validator.message('Email', this.state.Email, 'required|email','',{})}
-                <div style={{padding: '0 0 35px 0'}} />
-
-                <span className='fh_partner_label'>Business Name</span><span className='ft_required_mark'>*</span><br/>
-                    <Input style={{'max-width':'497px', margin: '10px 0 0 0'}} name='BName' value={BName} onChange={this.handleChange} placeholder='Business Name' size='large'></Input>
-                    {this.validator.message('Business Name', this.state.BName, 'required','',{})}
-                <div style={{padding: '0 0 35px 0'}} />
-
-                <span className='fh_partner_label'>Business Address</span><span className='ft_required_mark'>*</span><br/>
-                    <Input style={{'max-width':'497px', margin: '10px 0 0 0'}} name='Address' value={Address} onChange={this.handleChange} placeholder='Street Address' size='large'></Input>
-                    {this.validator.message('Address', this.state.Address, 'required','',{})}
-                    <div className='ft_partner_single_row'>
-                        <div>
-                            <Input style={{'width':'242px', margin: '10px 0 0 0'}} name='City' value={City} onChange={this.handleChange} placeholder='City' size='large'></Input>
-                            {this.validator.message('City', this.state.City, 'required','',{})}
-                        </div>
-                        <div>
-                            <Input style={{'width':'242px', margin: '10px 0 0 0'}} name='PostalCode' value={PostalCode} onChange={this.handleChange} placeholder='ZIP / Postal Code' size='large'></Input>
-                            {this.validator.message('PostalCode', this.state.PostalCode, 'required','',{})}
-                        </div>
-                    </div>
-                <div style={{padding: '0 0 35px 0'}} />
-
-                <span className='fh_partner_label'>Business Category</span><span className='ft_required_mark'>*</span><br/>
-                    <Input style={{'max-width':'497px', margin: '10px 0 0 0'}} name='Category' value={Category} onChange={this.handleChange} placeholder='Business Category' size='large'></Input>
-                    {this.validator.message('Category', this.state.Category, 'required','',{})}
-                <div style={{padding: '0 0 35px 0'}} />
-                    
+                {
+                    this.state.formVisible?
                     <div>
-                        <span className='fh_partner_label'>Description</span>
+                        <p className='ft_partner_modal_title'>Become a Partner</p>
+                        <hr style={{'padding-bottom':'10px'}} /> 
+                    </div>:null
+                }
+                {
+                    this.state.formVisible?
+                    <form onSubmit={this.handleSubmit}>
+                        <span className='fh_partner_label'>Area</span><span className='ft_required_mark'>*</span>
+                        <br/>
+                        <select
+                            className='ft_partner_select'
+                            name='Area'
+                            value={Area}
+                            onChange={this.handleChange}
+                            style={{width: '242px', 
+                                    background: 'white',
+                                    margin: '10px 0 35px 0'
+                                    }}
+                        >
+                            <option value="Great Vancouver">Great Vancouver</option>
+                            <option value="Calgary">Calgary</option>
+                            <option value="Edmonton">Edmonton</option> 
+                            <option value="Montreal">Montreal</option>
+                            <option value="Toronto">Toronto</option> 
+                            <option value="Seattle">Seattle</option>
+                            <option value="New York">New York</option>
+                        </select>
                         <br />
-                        <div style={{'padding-top':'10px'}} />
-                        <textarea className='ft_partner_textarea' name='Description' value={Description} onChange={this.handleChange}/>
-                    </div>
-                    
+                        
+                        <span className='fh_partner_label'>Name</span><span className='ft_required_mark'>*</span><br/>
+                            <div className='ft_partner_single_row'>
+                                <div>
+                                    <Input style={{'width':'242px', margin: '10px 0 0 0'}} name='First_Name' value={First_Name} onChange={this.handleChange} placeholder='First Name' size='large'></Input>
+                                    {this.validator.message('First Name', this.state.First_Name, 'required','',{})}
+                                </div>
+                                <div>
+                                    <Input style={{'width':'242px', margin: '10px 0 0 0'}} name='Last_Name' value={Last_Name} onChange={this.handleChange} placeholder='Last Name' size='large'></Input>
+                                    {this.validator.message('Last Name', this.state.Last_Name, 'required','',{})}
+                                </div>
+                            </div>
+                        <div style={{padding: '0 0 35px 0'}} />
+                        
+                        <span className='fh_partner_label'>Phone</span><span className='ft_required_mark'>*</span><br/>
+                            <Input style={{'max-width':'497px', margin: '10px 0 0 0'}} name='Mobile' value={Mobile} onChange={this.handleChange} placeholder='Phone Number' size='large'></Input>
+                            {this.validator.message('Mobile', this.state.Mobile, 'required|phone','',{})}
+                        <div style={{padding: '0 0 35px 0'}} />
+                        
+                        <span className='fh_partner_label'>Email</span><span className='ft_required_mark'>*</span><br/>
+                            <Input style={{'max-width':'497px', margin: '10px 0 0 0'}} name='Email' value={Email} onChange={this.handleChange} placeholder='Email Address' size='large'></Input>
+                            {this.validator.message('Email', this.state.Email, 'required|email','',{})}
+                        <div style={{padding: '0 0 35px 0'}} />
 
-                    <div className='ft_partner_verificode'>
-                        <span className='fh_partner_label'>Verification Code</span><span className='ft_required_mark'>*</span><br/>
-                        <VerificationCode flagupdate={this.updateflag} />
-                        {this.validator.message('Verification code', this.state.flag, 'required','',{
-                            required:'Please input code correctly.'
-                        })}
-                    </div>
-                    <hr />
-                    
-                    <button type='submit' className='ft_partner_submit_button'>Submit</button>
-                </form>
+                        <span className='fh_partner_label'>Business Name</span><span className='ft_required_mark'>*</span><br/>
+                            <Input style={{'max-width':'497px', margin: '10px 0 0 0'}} name='BName' value={BName} onChange={this.handleChange} placeholder='Business Name' size='large'></Input>
+                            {this.validator.message('Business Name', this.state.BName, 'required','',{})}
+                        <div style={{padding: '0 0 35px 0'}} />
+
+                        <span className='fh_partner_label'>Business Address</span><span className='ft_required_mark'>*</span><br/>
+                            <Input style={{'max-width':'497px', margin: '10px 0 0 0'}} name='Address' value={Address} onChange={this.handleChange} placeholder='Street Address' size='large'></Input>
+                            {this.validator.message('Address', this.state.Address, 'required','',{})}
+                            <div className='ft_partner_single_row'>
+                                <div>
+                                    <Input style={{'width':'242px', margin: '10px 0 0 0'}} name='City' value={City} onChange={this.handleChange} placeholder='City' size='large'></Input>
+                                    {this.validator.message('City', this.state.City, 'required','',{})}
+                                </div>
+                                <div>
+                                    <Input style={{'width':'242px', margin: '10px 0 0 0'}} name='PostalCode' value={PostalCode} onChange={this.handleChange} placeholder='ZIP / Postal Code' size='large'></Input>
+                                    {this.validator.message('PostalCode', this.state.PostalCode, 'required','',{})}
+                                </div>
+                            </div>
+                        <div style={{padding: '0 0 35px 0'}} />
+
+                        <span className='fh_partner_label'>Business Category</span><span className='ft_required_mark'>*</span><br/>
+                            <Input style={{'max-width':'497px', margin: '10px 0 0 0'}} name='Category' value={Category} onChange={this.handleChange} placeholder='Business Category' size='large'></Input>
+                            {this.validator.message('Category', this.state.Category, 'required','',{})}
+                        <div style={{padding: '0 0 35px 0'}} />
+                            
+                        <div>
+                            <span className='fh_partner_label'>Description</span>
+                            <br />
+                            <div style={{'padding-top':'10px'}} />
+                            <textarea className='ft_partner_textarea' name='Description' value={Description} onChange={this.handleChange}/>
+                        </div>
+                            
+                        <div className='ft_partner_verificode'>
+                            <span className='fh_partner_label'>Verification Code</span><span className='ft_required_mark'>*</span><br/>
+                            <VerificationCode flagupdate={this.updateflag} />
+                            {this.validator.message('Verification code', this.state.flag, 'required','',{
+                                required:'Please input code correctly.'
+                            })}
+                        </div>
+                        <hr />
+                        
+                        <button type='submit' onClick={this.showModal} className='ft_driver_submit_button'>Submit</button>
+                        {this.state.modalVisible?<SuccessModal getVisibility={this.GetVisibility}/>:null}  
+                    </form>:null
+                }
             </div>
         );
     }

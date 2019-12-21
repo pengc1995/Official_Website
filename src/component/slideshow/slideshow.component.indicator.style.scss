@@ -1,8 +1,22 @@
+.ft-career-container-bg {
+    background-color: #FFFFFF;
+}
+.ft-news-details-bg {
+    background-color: #FFFFFF;
+}
+.ft-container-bg {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
 /* Dots */
 .slick-dotted.slick-slider {
     margin-bottom: 0px;
 }
 
+.ft-career-slider1 > 
+.slick-dots,
+.ft-career-slider2 > 
 .slick-dots {
     position: absolute;
 
@@ -15,8 +29,10 @@
         position: relative;
         display: inline-block;
         height: 9px;
-        width: 40px !important;
-        margin: 0 0 0 5px !important;
+        // width: 40px !important;
+        // margin: 0 0 0 5px !important;
+        width: 40px;
+        margin: 0 0 0 5px;
         padding: 0;
         cursor: pointer;
         button {
@@ -41,12 +57,16 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                content: '' !important;
-                width: 39px !important;
-                height: 9px !important;
+                // content: '' !important;
+                // width: 39px !important;
+                // height: 9px !important;
+                content: '';
+                width: 39px;
+                height: 9px;
                 border: 1px solid rgba(187,187,187,1);
                 border-radius: 9px;
-                opacity: 1 !important;
+                // opacity: 1 !important;
+                opacity: 1;
                 background: rgba(255,255,255,1);
             }
         }

@@ -28,7 +28,7 @@ class NewsroomDetail extends Component {
         return(
             <div>
                 <Header />
-                
+                <div className='ft-news-container-bg'>
                 <div className='container'>
                     <div className='fh_news_det_path'>
                         <Link className='path_option' to="/">Home</Link>
@@ -45,8 +45,8 @@ class NewsroomDetail extends Component {
                         By {target_news.user}    |    {target_news.date}
                     </pre>
                     <hr className='fh_news_det_divider' />
-                    <div className='fh_news_det_content' dangerouslySetInnerHTML = {{ __html:content }}></div>
-                    {/* <p className='fh_news_det_content'>{target_news.content}</p>  */}
+                    <p className='fh_news_det_content' dangerouslySetInnerHTML = {{ __html:content }}></p>
+                </div>
                 </div>
                 <Footer />
             </div>

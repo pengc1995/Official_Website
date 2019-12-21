@@ -5,7 +5,6 @@ import { Input } from 'antd';
 
 import './verification.component.style.css';
 
-
 class VerificationCode extends Component {
 
     constructor(props) {
@@ -20,7 +19,7 @@ class VerificationCode extends Component {
 
     onInputStringChange(e) {
         this.setState({ 
-            inputstring: e.target.value  
+            inputstring: e.target.value,  
         });
         if (e.target.value.toLowerCase() === this.state.vcodestring.toLowerCase()) {
             this.setState({ flag: 'correct' }, ()=>{

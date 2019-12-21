@@ -12,9 +12,11 @@ class JoinUsModal extends Component {
         visible: false,
       };
   }
+
   getformVisibility = (visibility) => {
     this.setState({visible:visibility})
   }
+
   showModal = () => {
     this.setState({
       visible: true
@@ -36,18 +38,15 @@ class JoinUsModal extends Component {
         <Modal
           visible={visible}
           closable={false}
-          onOk={this.handleOk}
           onCancel={this.handleCancel}
           footer={null}
           width='597px'
         >
             <div className='ft_driver_body'>
-                {/* <p className='ft_driver_modal_title'>Become a driver</p>
-                <hr style={{'padding-bottom':'10px'}} /> */}
                 <JoinUs getformVisibility={this.getformVisibility}/>
-                {/* <button onClick={this.handleCancel} className='ft_driver_cancle_button'>
+                <button onClick={this.handleCancel} className='ft_driver_cancle_button'>
                     Close
-                </button> */}
+                </button> 
             </div>
         </Modal>
       </div>

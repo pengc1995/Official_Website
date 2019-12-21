@@ -25,8 +25,8 @@ const JobData=[
     },
     {
         "id": 4,
-        "area": "NY",
-        "position": "QA tester",
+        "area": "Burnaby, BC",
+        "position": "Marketing Coordinator",
         "initialRegistration":"Feb 20 2019",
         "brief": "You are an advocate of quality and promote software development best practices in engineering and testing. You endeavor to create better end user experiences. About The Position You will be working hand in hand with the primary developers to learn and extend the existing test suite for our soon-to-be-released project. You will be initially writing tests in php meant to be run on the PhpUnit test suite. You will be primarily writing functional tests to specification, as well as thinking about areas where testing could be made more comprehensive, and suggesting changes. The position requires someone who can work with a degree of autonomy, spending time thinking about how the product could break, and suggesting and implementing tests to help ensure viability. You may also be helping verify developer feature implementations meet the requirements of a given task.",
         "expedited": true
