@@ -1,5 +1,6 @@
 /* Create by Chelly P */
 import React, { Component } from 'react';
+import { FormattedMessage} from 'react-intl';
 
 import NewsCard from './newscard.component';
 import NewsCollapse from './newscollapse.component';
@@ -42,8 +43,8 @@ class NewsMore extends Component {
         return (
             <div>
                 <div className='fh_news'>
-                <h1 className='ft-w1140-section-fs40 fh_news_title'>Fantuan News</h1>
-                <p className='ft-w1140-section-fs16 fh_news_title_contact'>Advertising information please contact us pr@fantuan.ca</p>
+                <h1 className='ft-w1140-section-fs40 fh_news_title'><FormattedMessage id="ft_news_title"/></h1>
+                <p className='ft-w1140-section-fs16 fh_news_title_contact'><FormattedMessage id="ft_news_contact"/></p>
                 </div>
 
                 <div className='fh_news_group'>

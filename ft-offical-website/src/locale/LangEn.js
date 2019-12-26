@@ -75,6 +75,17 @@ const en_US = {
     ft_about_contactus_country1: "CANADA",
     ft_about_contactus_country2: "United States",
 
+    // Office website - newsroom
+    // -------------------------
+
+    // newsroom
+    ft_news_title: "Fantuan News",
+    ft_news_contact: "Advertising information please contact us pr@fantuan.ca",
+    ft_news_viewmore: "View more",
+    ft_news_path_home: "Home",
+    ft_news_path_newsroom: "Newsroom",
+    ft_news_path_newsdetail: "News details",
+
 
     // Delivery - header & footer
     // ==========================

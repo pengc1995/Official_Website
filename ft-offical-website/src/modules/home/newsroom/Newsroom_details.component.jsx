@@ -1,6 +1,7 @@
 /* Create by Chelly P */
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
+import { FormattedMessage} from 'react-intl';
 
 import Header from '../Header';
 import Footer from '../Footer';
@@ -31,11 +32,11 @@ class NewsroomDetail extends Component {
                 <div className='ft-news-container-bg'>
                 <div className='ft_detail_container'>
                     <div className='fh_news_det_path'>
-                        <Link className='path_option' to="/">Home</Link>
+                        <Link className='path_option' to="/"><FormattedMessage id="ft_news_path_home"/></Link>
                         <span className='path_arrow'>></span>
-                        <Link className='path_option' to="/news">Newsroom</Link>
+                        <Link className='path_option' to="/news"><FormattedMessage id="ft_news_path_newsroom"/></Link>
                         <span className='path_arrow'>></span>
-                        <Link className='path_option'>News details</Link>
+                        <Link className='path_option'><FormattedMessage id="ft_news_path_newsdetail"/></Link>
                     </div>
 
                     <h1 className='ft-w1140-section-fs40 fh_news_det_title'>

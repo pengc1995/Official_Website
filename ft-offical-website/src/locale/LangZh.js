@@ -75,6 +75,17 @@ const zh_CN = {
     ft_about_contactus_country1: "加拿大",
     ft_about_contactus_country2: "美国",
 
+    // Office website - newsroom
+    // -------------------------
+
+    // newsroom
+    ft_news_title: "饭团新闻",
+    ft_news_contact: "广告信息，请联系我们 pr@fantuan.ca",
+    ft_news_viewmore: "更多新闻",
+    ft_news_path_home: "饭团",
+    ft_news_path_newsroom: "饭团新闻",
+    ft_news_path_newsdetail: "新闻内容",
+
 
     // Delivery (外卖) - header & footer
     // ================================
