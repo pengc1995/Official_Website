@@ -18,7 +18,6 @@ import Header from './DeliveryHeader';
 import Footer from './DeliveryFooter';
 
 import './DeliveryFAQ.css';
-// import { whileStatement } from '@babel/types';
 
 const { Panel } = Collapse;
 
@@ -39,33 +38,6 @@ class DeliveryFAQ extends Component {
   }
 
   render() {
-
-    // let styleObj ={
-    //   // background: '#ccc',
-    //   border: 'none',
-    //   // border-top: 'solid 1px #ccc',
-    //   background: this.state.changeColor ? '#ccc' : 'white',
-    // }
-    // const customPanelStyle = {
-    //   background: '#f7f7f7',
-    //   // borderRadius: 4,
-    //   // marginBottom: 24,
-    //   border: 0,
-    //   overflow: 'hidden',
-    //     };
-
-    // const settings = {
-    //   dots: true,
-    //   // dotPosition: top,
-    //   infinite: true,
-    //   slidesToShow: 2,
-    //   slidesToScroll: 2,
-    //   autoplay: true,
-    //   // speed: 7000,
-    //   autoplaySpeed: 2000,
-    //   pauseOnHover: true,
-    //   adaptiveHeight: false
-    //     };
     
     return (
       <>
@@ -75,9 +47,9 @@ class DeliveryFAQ extends Component {
         <div className="fd-faq-faq-bg">
           <div className="fd-faq-faq-content">
             <h1 className="fd-faq-faq-header"><FormattedMessage id="fd_faq_header"/></h1>
-            <p className="fd-faq-faq-header-note">
+            <div className="fd-faq-faq-header-note">
               <FormattedMessage id="fd_faq_text"/>
-            </p>
+            </div>
           </div>
         </div>
 

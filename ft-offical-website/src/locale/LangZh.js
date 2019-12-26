@@ -13,7 +13,7 @@ const zh_CN = {
     // 官网头部内容
     ft_header_fantuan: "饭团",
     ft_header_about: "关于我们",
-    ft_header_newsroom: "媒体新闻",
+    ft_header_newsroom: "饭团新闻",
     ft_header_career: "招聘频道",
     ft_header_language: "English",
 
@@ -21,7 +21,7 @@ const zh_CN = {
     ft_footer_ftdelivery: "饭团外卖",
     ft_footer_ftdianping: "饭团点评",
     ft_footer_aboutus: "关于我们",
-    ft_footer_newsroom: "媒体新闻",
+    ft_footer_newsroom: "饭团新闻",
     ft_footer_careers: "招聘频道",
     ft_footer_contactus: "联系我们",
     ft_footer_policy: "隐私政策",
@@ -87,7 +87,7 @@ const zh_CN = {
     // Footer of the delivery
     fd_footer_dianping: "饭团点评",
     fd_footer_aboutus: "关于我们",
-    fd_footer_newsroom: "媒体新闻",
+    fd_footer_newsroom: "饭团新闻",
     fd_footer_career: "招聘频道",
     fd_footer_contactus: "联系我们",
     fd_footer_faq: "疑问解答",
@@ -136,7 +136,7 @@ const zh_CN = {
 
     // Partner with Fantuan
     fd_partner_with_header: "商家合作",
-    fd_partner_with_text: "商家可下载商家端软件，通过软件一键接单，免去繁琐电话接单，节省人力。商家更可查看订单详情，了解菜品销量，优化餐厅运营。",
+    fd_partner_with_text: "商家可下载饭团商家端软件。通过软件一键接单，免去繁琐电话接单，节省人力。商家更可查看订单详情，了解菜品销量，优化餐厅运营。",
     fd_partner_with_button: "我要入驻",
 
     // More customer
@@ -174,8 +174,8 @@ const zh_CN = {
     // advert
     fd_partner_advert_title: "广告合作",
     fd_partner_advert_text: "饭团依托大平台优势，帮您精准定位客户群。饭团各类广告位是增加品牌知名度最直接有效的方式。广告位包括餐饮和非餐饮类别，您可以点击下载广告资料，或点击立即申请填写联络方式，我们将有专人联系您。",
-    fd_partner_advert_button1: "Contact Now",
-    fd_partner_advert_button2: "Media Kit",
+    fd_partner_advert_button1: "立即申请",
+    fd_partner_advert_button2: "广告资料",
 
     // Delivery - Partner - Become a Partner
     // -------------------------------------
@@ -249,7 +249,7 @@ const zh_CN = {
     fd_deliver_become_button: "我要入驻",
     fd_deliver_become_title: "成为送餐员",
     fd_deliver_become_area: "地区",
-    fd_deliver_become_area_select1: "Great Vancouver",
+    fd_deliver_become_area_select1: "Greater Vancouver",
     fd_deliver_become_area_select2: "Los Angeles",
     fd_deliver_become_area_select3: "Toronto",
     fd_deliver_become_name: "姓名",
@@ -272,9 +272,9 @@ const zh_CN = {
     fd_deliver_become_schedule_name8: "Surrey",
     fd_deliver_become_schedule_name9: "Vancouver",
     fd_deliver_become_trans_title: "交通工具",
-    fd_deliver_become_trans_name1: "Car(self-provided)",
-    fd_deliver_become_trans_name1: "Electric Motorbike(rent)",
-    fd_deliver_become_trans_name1: "Motorbike(self-provided)",
+    fd_deliver_become_trans_name1: "Car (self-provided)",
+    fd_deliver_become_trans_name1: "Electric Motorbike (rent)",
+    fd_deliver_become_trans_name1: "Motorbike (self-provided)",
     fd_deliver_become_hours_title: "送餐时间",
     fd_deliver_become_hours_time01: "周一 11am - 5pm",
     fd_deliver_become_hours_time02: "周二 11am - 5pm",

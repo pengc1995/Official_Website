@@ -22,7 +22,7 @@ const  mapAdrsOfUSA = [{
   },{
     "id":"3",
     "city":"Seattle",
-    "phone":"Phon: 206-227-6292",
+    "phone":"Phone: 206-227-6292",
     "email":"Email: seattle@fantuan.us",
     "address":"",
     "imgsrc":"/imgs/office/map/us/seattle.png"

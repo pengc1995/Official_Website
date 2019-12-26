@@ -15,7 +15,7 @@ const AboutUsCarouselData = [{
     "id":"2",
     "imgSrc":"/imgs/test/cat-widget2.jpg",
     "slideTitle":"Food Delivery",
-    "slideCaption":"Choose from a selection of big-name restaurants and local specialties. Your number one stop to get the most choices of Asian food and enjoy everyday discount!"
+    "slideCaption":"Choose from a selection of big-name restaurants and local specialties. Your number one stop to get the most Asian food choices and everyday discounts!"
   },{
     "id":"3",
     "imgSrc":"/imgs/test/cat-widget3.jpg",
@@ -30,7 +30,7 @@ const AboutUsCarouselData = [{
     "id":"3",
     "imgSrc":"/imgs/test/cat-widget3.jpg",
     "slideTitle":"Fantuan Mart",
-    "slideCaption":"Besides instant restaurant delivery, you can also enjoy convenient delivery of a variety of products including fresh fruit, snacks, flowers, beauty products and more."
+    "slideCaption":"Besides instant food delivery, you can also enjoy convenient delivery of various grocery store items such as fresh fruit, snacks, flowers, beauty products and more."
   }]
 
 export default AboutUsCarouselData;

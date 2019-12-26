@@ -13,24 +13,13 @@ class VerificationCode extends Component {
           inputstring: '', 
           vcodestring: '-1', 
           code: '',
-          flag: '',
         };
     }
 
     onInputStringChange(e) {
         this.setState({
-            inputstring: e.target.value,
+          inputstring: e.target.value,
         });
-        if (e.target.value.toLowerCase() === this.state.vcodestring.toLowerCase()) {
-            this.setState({ flag: 'correct' }, ()=>{
-                this.props.flagupdate(this.state.flag)
-            });
-        }
-        else {
-            this.setState({ flag: '' }, ()=>{
-                this.props.flagupdate(this.state.flag)
-            });
-        }
       }
     
     onVcodeStringChange(v) {
@@ -38,15 +27,15 @@ class VerificationCode extends Component {
     if (v) {
         this.setState({
         vcodestring: v,
-        inputstring: '',
-            flag: '',
-            }, 
-            ()=>{this.props.flagupdate(this.state.flag)
         });
     }
     }
 
-    render() { 
+    render() {
+        var validateCode = this.state.vcodestring;
+        var thisInput = this.state.inputstring;
+        var tip; 
+
         return (
             <div className='ft_verification'>
                 <div>
@@ -56,7 +45,15 @@ class VerificationCode extends Component {
                         maxLength={20} 
                         size='large' 
                         style={{width:'250px'}}
+                        required
                 />
+
+                <span className='ft_verification_instruction'>
+                    {
+                        validateCode.toLowerCase() === thisInput.toLowerCase() ? 
+                        'Correct' : 'Not Correct'
+                    }
+                </span> 
                 </div>
                 <div>
                 <Vcode onChange={v => this.onVcodeStringChange(v)} value={this.state.code} />

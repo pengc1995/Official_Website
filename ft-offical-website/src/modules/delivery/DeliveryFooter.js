@@ -49,8 +49,8 @@ class Footer extends Component {
                             <Navbar className="fd-footer-5-google">
                                 <Navbar.Brand href="https://play.google.com/store/search?q=fantuan">
                                 <img src={require('../../assets/imgs/icon/GooglePlay2@2x.png')}
-                                 width="138px"
-                                 height="38px"
+                                 width="143px"
+                                 height="44px"
                                  className="d-inline-block align-top"
                                  alt="Google Play"/>
                                 </Navbar.Brand>
@@ -58,8 +58,8 @@ class Footer extends Component {
                             <Navbar className="fd-footer-5-appstore">
                                 <Navbar.Brand href="https://apps.apple.com/ca/app/%E9%A5%AD%E5%9B%A2-%E5%8A%A0%E6%8B%BF%E5%A4%A7%E5%A4%96%E5%8D%96%E9%A4%90%E9%A5%AE%E5%93%81%E8%B4%A8%E6%9C%8D%E5%8A%A1%E5%B9%B3%E5%8F%B0/id1218697769">
                                 <img src={require('../../assets/imgs/icon/AppStore@2x.png')}
-                                    width="138px"
-                                    height="38px"
+                                    width="143px"
+                                    height="44px"
                                     className="d-inline-block align-top"
                                     alt="App Store"/>
                                 </Navbar.Brand>

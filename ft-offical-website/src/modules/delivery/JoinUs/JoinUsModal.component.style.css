@@ -17,10 +17,11 @@
     font-weight:bold;
     line-height:19px;
 }
+.ft_driver_modal_button:hover {
+    opacity: 0.8;
+}
 .ft_driver_modal_button_icon {
-    width: 21px;
-    height: 21px;
-    margin-right: 11px;
+    padding-right: 15px;
 }
 
 .ft_driver_modal_title {

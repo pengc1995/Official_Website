@@ -15,28 +15,28 @@ const  mapAdrsOfCanada = [{
   },{
     "id":"2",
     "city":"Calgary",
-    "phone":"Phon: 780-399-7880",
+    "phone":"Phone: 780-399-7880",
     "email":"Email: jingshang@fantuan.ca",
     "address":"",
     "imgsrc":"/imgs/office/map/ca/Alberta.png"
   },{
     "id":"3",
     "city":"Edmonton",
-    "phone":"Phon: 587-974-9662",
+    "phone":"Phone: 587-974-9662",
     "email":"Email: shelbywang@fantuan.ca",
     "address":"",
     "imgsrc":"/imgs/office/map/ca/Alberta.png"
   },{
     "id":"4",
     "city":"Greater Toronto Area",
-    "phone":"Phon: 647-545-1444",
+    "phone":"Phone: 647-545-1444",
     "email":"Email: marketing@fantuan.ca",
     "address":"",
     "imgsrc":"/imgs/office/map/ca/Ontario.png"
   },{
     "id":"5",
     "city":"Montreal",
-    "phone":"Phon: 514-885-6507",
+    "phone":"Phone: 514-885-6507",
     "email":"Email: johnnyyin@fantuan.ca",
     "address":"",
     "imgsrc":"/imgs/office/map/ca/Quebec.png"

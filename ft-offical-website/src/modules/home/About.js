@@ -368,28 +368,29 @@ class About extends Component {
                 {/* <img className="ft-about-best-bg-img" src={require('../../assets/imgs/bg/fantuan-about-best.jpg')} alt=""/> */}
                 {/* <img className="ft-about-best-bg-img" src={this.state.selectedFdImage} alt=""/>   20191210 */}
                 <div className="ft-about-best-text-buttons">
-                <p className="ft-about-best-thebest"><FormattedMessage id="ft_about_best_p1"/></p>
+                <div className="ft-about-best-thebest"><FormattedMessage id="ft_about_best_p1"/></div>
                 <strong className="ft-about-best-af blink"><FormattedMessage id="ft_about_best_p2"/></strong><br/>
                 <strong className="ft-about-best-del"><FormattedMessage id="ft_about_best_p3"/></strong>
                 <br/>
                 <br/>
                 <div className="ft-about-best-buttons">
                     <div>
-                        <Button className="ft-w1140-button-fs16 ft-about-best-button0" style={aboutBestBtnStyle} variant="outline-light" href={this.state.selectedLink}>
+                    {/* <Button className="ft-about-best-button0" style={aboutBestBtnStyle} variant="outline-light" href={this.state.selectedLink}> */}
+                    <Button className="ft-about-best-button0" style={aboutBestBtnStyle} href={this.state.selectedLink}>
                             <FormattedMessage id="ft_about_best_btn"/> >
                         </Button>
                     </div>
                     <div className="ft-about-best-button12">
-                        <Button className="ft-w1140-button-fs16 ft-about-best-button1" onMouseMove={this.handleMouseMoveOnDelivery} variant="outline-light" href="/delivery">
+                        <Button className="ft-about-best-button1" onMouseMove={this.handleMouseMoveOnDelivery} variant="outline-light" href="/delivery">
                             <img className="ft-about-best-buttons-img" src={require('../../assets/imgs/icon/delivery/fantuan-delivery-logo-color@2x.png')}
                             width="100%"
-                            height="100%"
+                            height="42px"
                             alt="To delivery"/>
                         </Button>
-                        <Button className="ft-w1140-button-fs16 ft-about-best-button2" onMouseMove={this.handleMouseMoveOnDianping} variant="outline-light" href="/dianping">
+                        <Button className="ft-about-best-button2" onMouseMove={this.handleMouseMoveOnDianping} variant="outline-light" href="/dianping">
                             <img className="ft-about-best-buttons-img" src={require('../../assets/imgs/icon/dianping/fantuan-dianping-logo@2x.png')}
                             width="100%"
-                            height="100%"
+                            height="42px"
                             alt="dianping"/>
                         </Button>
                     </div>
@@ -403,8 +404,8 @@ class About extends Component {
                 <div className="ft-about-about-content">
                     <Card className="col-auto">
                         <Card.Body>
-                            <Card.Title className="ft-w1140-section-fs40 text-center title_in_body"><FormattedMessage id="ft_about_fantuan_title"/></Card.Title>
-                            <Card.Text className="ft-w1140-text-fs18"><FormattedMessage id="ft_about_fantuan_text"/></Card.Text>
+                            <Card.Title className="ft-about-about-card-title"><FormattedMessage id="ft_about_fantuan_title"/></Card.Title>
+                            <Card.Text className="ft-about-about-card-text"><FormattedMessage id="ft_about_fantuan_text"/></Card.Text>
                         </Card.Body>
                     </Card>
                 </div>
@@ -414,20 +415,20 @@ class About extends Component {
             <div className="ft-about-history-bg">
                 <div className="ft-about-history-content">
                 <div className="ft-about-history-timeline">
-                <div className="ft-about-history-title ft-w1140-section-fs40"><FormattedMessage id="ft_about_history_title"/></div>
+                <div className="ft-about-history-title"><FormattedMessage id="ft_about_history_title"/></div>
                 <div className="ft-about-TimelineComponent">
                     <div ref="inner0" class={classactive[0]}>
                         <div className="ft-about-YearComponent">
-                        <div className="ft-about-YearComponentItem ft-w1140-text-fs18">
+                        <div className="ft-about-YearComponentItem">
                             <FormattedMessage id="ft_about_history_year0"/>
                         </div>
                         </div>
                         <div className="ft-about-BodyComponent body-component">
-                        <p className="ft-about-BodyComponentTitle ft-w1140-text-fs16">
+                        <p className="ft-about-BodyComponentTitle">
                             <FormattedMessage id="ft_about_history_title0"/>
                         </p>
                         <div className="ft-about-DescriptionComponent">
-                            <span className="ft-about-DescriptionComponentText ft-w1140-text-fs14">
+                            <span className="ft-about-DescriptionComponentText">
                                 <FormattedMessage id="ft_about_history_text0"/>  
                             </span>
                             {/* <span className="ft-about-DescriptionComponentTextOptional ft-w1140-text-fs14">
@@ -438,16 +439,16 @@ class About extends Component {
                     </div>
                     <div ref="inner1" class={classactive[1]}>
                         <div className="ft-about-YearComponent">
-                            <div className="ft-about-YearComponentItem ft-w1140-text-fs18">
+                            <div className="ft-about-YearComponentItem">
                                 <FormattedMessage id="ft_about_history_year1"/>
                             </div>
                         </div>
                         <div className="ft-about-BodyComponent body-component">
-                        <p className="ft-about-BodyComponentTitle ft-w1140-text-fs16">
+                        <p className="ft-about-BodyComponentTitle">
                             <FormattedMessage id="ft_about_history_title1"/>
                         </p>
                         <div className="ft-about-DescriptionComponent">
-                            <span className="ft-about-DescriptionComponentText ft-w1140-text-fs14">
+                            <span className="ft-about-DescriptionComponentText">
                                 <FormattedMessage id="ft_about_history_text1"/>
                             </span>
                         </div>
@@ -455,16 +456,16 @@ class About extends Component {
                     </div>
                     <div ref="inner2" class={classactive[2]}>
                         <div className="ft-about-YearComponent">
-                            <div className="ft-about-YearComponentItem ft-w1140-text-fs18">
+                            <div className="ft-about-YearComponentItem">
                                 <FormattedMessage id="ft_about_history_year2"/>
                             </div>
                         </div>
                         <div className="ft-about-BodyComponent body-component">
-                        <p className="ft-about-BodyComponentTitle ft-w1140-text-fs16">
+                        <p className="ft-about-BodyComponentTitle">
                             <FormattedMessage id="ft_about_history_title2"/>
                         </p>
                         <div className="ft-about-DescriptionComponent">
-                            <span className="ft-about-DescriptionComponentText ft-w1140-text-fs14">
+                            <span className="ft-about-DescriptionComponentText">
                                 <FormattedMessage id="ft_about_history_text2"/>  
                             </span>
                             {/* <span className="ft-about-DescriptionComponentTextOptional ft-w1140-text-fs14">
@@ -475,16 +476,16 @@ class About extends Component {
                     </div>
                     <div ref="inner3" class={classactive[3]}>
                         <div className="ft-about-YearComponent">
-                            <div className="ft-about-YearComponentItem ft-w1140-text-fs18">
+                            <div className="ft-about-YearComponentItem">
                                 <FormattedMessage id="ft_about_history_year3"/>
                             </div>
                         </div>
                         <div className="ft-about-BodyComponent body-component">
-                        <p className="ft-about-BodyComponentTitle ft-w1140-text-fs16">
+                        <p className="ft-about-BodyComponentTitle">
                             <FormattedMessage id="ft_about_history_title3"/>
                         </p>
                         <div className="ft-about-DescriptionComponent">
-                            <span className="ft-about-DescriptionComponentText ft-w1140-text-fs14">
+                            <span className="ft-about-DescriptionComponentText">
                                 <FormattedMessage id="ft_about_history_text3"/>
                             </span>
                             {/* <span className="ft-about-DescriptionComponentTextOptional ft-w1140-text-fs14">
@@ -495,16 +496,16 @@ class About extends Component {
                     </div>
                     <div ref="inner4" class={classactive[4]}>
                         <div className="ft-about-YearComponent">
-                            <div className="ft-about-YearComponentItem ft-w1140-text-fs18">
+                            <div className="ft-about-YearComponentItem">
                                 <FormattedMessage id="ft_about_history_year4"/>
                             </div>
                         </div>
                         <div className="ft-about-BodyComponent body-component">
-                        <p className="ft-about-BodyComponentTitle ft-w1140-text-fs16">
+                        <p className="ft-about-BodyComponentTitle">
                             <FormattedMessage id="ft_about_history_title4"/>
                         </p>
                         <div className="ft-about-DescriptionComponent">
-                            <span className="ft-about-DescriptionComponentText ft-w1140-text-fs14">
+                            <span className="ft-about-DescriptionComponentText">
                                 <FormattedMessage id="ft_about_history_text4"/>
                             </span>
                         </div>
@@ -512,16 +513,16 @@ class About extends Component {
                     </div>
                     <div ref="inner5" class={classactive[5]}>
                         <div className="ft-about-YearComponent">
-                            <div className="ft-about-YearComponentItem ft-w1140-text-fs18">
+                            <div className="ft-about-YearComponentItem">
                                 <FormattedMessage id="ft_about_history_year5"/>
                             </div>
                         </div>
                         <div className="ft-about-BodyComponent body-component">
-                        <p className="ft-about-BodyComponentTitle ft-w1140-text-fs16">
+                        <p className="ft-about-BodyComponentTitle">
                             <FormattedMessage id="ft_about_history_title5"/>
                         </p>
                         <div className="ft-about-DescriptionComponent">
-                            <span className="ft-about-DescriptionComponentText ft-w1140-text-fs14">
+                            <span className="ft-about-DescriptionComponentText">
                                 <FormattedMessage id="ft_about_history_text5"/>
                             </span>
                         </div>
@@ -529,16 +530,16 @@ class About extends Component {
                     </div>
                     <div ref="inner6" class={classactive[6]}>
                     <div className="ft-about-YearComponent">
-                        <div className="ft-about-YearComponentItem ft-w1140-text-fs18">
+                        <div className="ft-about-YearComponentItem">
                             &nbsp;
                         </div>
                     </div>
                     <div className="ft-about-BodyComponent body-component">
-                        <p className="ft-about-BodyComponentTitle ft-w1140-text-fs16">
+                        <p className="ft-about-BodyComponentTitle">
                             <FormattedMessage id="ft_about_history_title6"/>
                         </p>
                         <div className="ft-about-DescriptionComponent">
-                            <span className="ft-about-DescriptionComponentText ft-w1140-text-fs14">
+                            <span className="ft-about-DescriptionComponentText">
                                 <FormattedMessage id="ft_about_history_text6"/>
                             </span>
                         </div>
@@ -546,16 +547,16 @@ class About extends Component {
                     </div>
                     <div ref="inner7" class={classactive[7]}>
                     <div className="ft-about-YearComponent">
-                        <div className="ft-about-YearComponentItem ft-w1140-text-fs18">
+                        <div className="ft-about-YearComponentItem">
                             &nbsp;
                         </div>
                     </div>
                     <div className="ft-about-BodyComponent body-component">
-                        <p className="ft-about-BodyComponentTitle ft-w1140-text-fs16">
+                        <p className="ft-about-BodyComponentTitle">
                             <FormattedMessage id="ft_about_history_title7"/>
                         </p>
                         <div className="ft-about-DescriptionComponent">
-                            <span className="ft-about-DescriptionComponentText ft-w1140-text-fs14">
+                            <span className="ft-about-DescriptionComponentText">
                                 <FormattedMessage id="ft_about_history_text7"/>
                             </span>
                         </div>
@@ -570,46 +571,43 @@ class About extends Component {
             <div id="contactusid" className="ft-about-contact-bg">
                 <div className="ft-about-contact-content">
                 <div>
-                    <div className="ft-about-contact-title ft-w1140-section-fs40"><FormattedMessage id="ft_about_contactus_title"/></div>
-                    <div className="ft-about-contact-note1 ft-w1140-section-fs16">
+                    <div className="ft-about-contact-title"><FormattedMessage id="ft_about_contactus_title"/></div>
+                    <div className="ft-about-contact-note">
                         <FormattedMessage id="ft_about_contactus_text"/>
                     </div>
-                    {/* <div className="ft-about-contact-note2 ft-w1140-section-fs16">
-                        what you need, right when you need it.
-                    </div> */}
                 </div>
-                <Tab.Container id="left-tabs-example" defaultActiveKey="canada">
+                <Tab.Container className="ft-about-contact-container" id="left-tabs-example" defaultActiveKey="canada">
                 <Col>
                     <Row>
                     <Nav className="ft-about-contact-buttons">
                         <Nav.Item>
-                        <Nav.Link className="ft-about-contact-but-ca ft-w1140-text-fs14"  eventKey="canada"><FormattedMessage id="ft_about_contactus_country1"/></Nav.Link>
+                        <Nav.Link className="ft-about-contact-but-ca"  eventKey="canada"><FormattedMessage id="ft_about_contactus_country1"/></Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                        <Nav.Link className="ft-about-contact-but-us ft-w1140-text-fs14" eventKey="unitedstates"><FormattedMessage id="ft_about_contactus_country2"/></Nav.Link>
+                        <Nav.Link className="ft-about-contact-but-us" eventKey="unitedstates"><FormattedMessage id="ft_about_contactus_country2"/></Nav.Link>
                         </Nav.Item>
                     </Nav>
                     </Row>
                     <Row>
                     <Tab.Content>
                         <Tab.Pane eventKey="canada">
-                            <div className="ft-home-contact-mapadr">
-                                <div className="ft-home-contact-map">
+                            <div className="ft-about-contact-mapadr">
+                                <div className="ft-about-contact-map">
                                     {mapAdrsCa
                                         .filter(ft => Number(ft.id) == this.state.indexMap)
                                         .map((item,index) => (
-                                        <img key={index} className="ft-home-contact-map-img" src={item.imgsrc}
-                                        alt="map"/>
+                                        <img key={index} className="ft-about-contact-map-img" src={item.imgsrc}
+                                        width="673px" alt="map"/>
                                     ))}
                                 </div>
-                                <div className="ft-home-contact-adr">
+                                <div className="ft-about-contact-adr">
                                     <Slider {...settings}>
                                         {mapAdrsCa.map((ft,index) => (
-                                        <div className="ft-home-contact-card" onMouseMove={(e)=>this.handleMouseMove({index},e)}>
-                                            <p className="ft-home-contact-info ft-w1140-smtext-fs18 ft-home-contact-info-title">{ft.city}</p> 
-                                            <p className="ft-home-contact-info ft-w1140-smtext-fs14">{ft.phone}</p> 
-                                            <p className="ft-home-contact-info ft-w1140-smtext-fs14">{ft.email}</p> 
-                                            <p className="ft-home-contact-info ft-w1140-smtext-fs14">{ft.address}</p> 
+                                        <div className="ft-about-contact-card" onMouseMove={(e)=>this.handleMouseMove({index},e)}>
+                                            <div className="ft-about-contact-info ft-about-contact-info-title">{ft.city}</div> 
+                                            <div className="ft-about-contact-info ft-about-contact-info-detail">{ft.phone}</div> 
+                                            <div className="ft-about-contact-info ft-about-contact-info-detail">{ft.email}</div> 
+                                            <div className="ft-about-contact-info ft-about-contact-info-detail">{ft.address}</div> 
                                         </div>
                                         ))}
                                     </Slider>        
@@ -617,23 +615,23 @@ class About extends Component {
                             </div>
                         </Tab.Pane>
                         <Tab.Pane eventKey="unitedstates">
-                            <div className="ft-home-contact-mapadr">
-                                <div className="ft-home-contact-map">
+                            <div className="ft-about-contact-mapadr">
+                                <div className="ft-about-contact-map">
                                     {mapAdrsUs
                                         .filter(ft => Number(ft.id) == this.state.indexMap)
                                         .map((item,index) => (
-                                        <img key={index} className="ft-home-contact-map-img" src={item.imgsrc}
-                                        alt="map"/>
+                                        <img key={index} className="ft-about-contact-map-img" src={item.imgsrc}
+                                        width="673px" alt="map"/>
                                     ))}
                                 </div>
-                                <div className="ft-home-contact-adr">
+                                <div className="ft-about-contact-adr">
                                     <Slider {...settings}>
                                         {mapAdrsUs.map((ft,index) => (
-                                        <div className="ft-home-contact-card" onMouseMove={(e)=>this.handleMouseMove({index},e)}>
-                                            <p className="ft-home-contact-info ft-w1140-smtext-fs18 ft-home-contact-info-title">{ft.city}</p> 
-                                            <p className="ft-home-contact-info ft-w1140-smtext-fs14">{ft.phone}</p> 
-                                            <p className="ft-home-contact-info ft-w1140-smtext-fs14">{ft.email}</p> 
-                                            <p className="ft-home-contact-info ft-w1140-smtext-fs14">{ft.address}</p> 
+                                        <div className="ft-about-contact-card" onMouseMove={(e)=>this.handleMouseMove({index},e)}>
+                                            <div className="ft-about-contact-info ft-about-contact-info-title">{ft.city}</div> 
+                                            <div className="ft-about-contact-info ft-about-contact-info-detail">{ft.phone}</div> 
+                                            <div className="ft-about-contact-info ft-about-contact-info-detail">{ft.email}</div> 
+                                            <div className="ft-about-contact-info ft-about-contact-info-detail">{ft.address}</div> 
                                         </div>
                                         ))}
                                     </Slider>        

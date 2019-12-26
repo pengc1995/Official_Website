@@ -50,19 +50,6 @@
   opacity: 0.2;
 }
 
-/* .blink { animation: change 12s  ease-in  infinite ; font-size: 36px; color:#f00; font-weight: bold}
-@keyframes change {
-    0%{ text-shadow: 0 0 4px #f00}
-    50%{ text-shadow: 0 0 40px #f00}
-    100%{ text-shadow: 0 0 4px #f00}
-} */
-/* .blink { animation: change 12s  ease-in  infinite;}
-@keyframes change {
-  0%{ text-shadow: 0 0 3px #f00}
-  50%{ text-shadow: 0 0 20px #f00}
-  100%{ text-shadow: 0 0 3px #f00}
-} */
-
 @media (max-width: 375px){
   .fd-home-best-content {
     height: 332px;
@@ -279,40 +266,36 @@
   }
 
   .fd-home-best-thebest {
-    padding-top: 87.5px; /* (135-90)/2=22.5; to top: 110-22.5=87.5 */
-    font-family: sans-serif;
-    font-size: 80px;
-    font-weight: lighter;
-    color: white;
+    padding-top: 110px;
+    font-size:90px;
+    font-family:OpenSans-Light,OpenSans;
+    font-weight:300;
+    color:rgba(255,255,255,1);
+    line-height:95px;
   }
   .fd-home-best-af {
-    line-height: 60px;
-    font-size: 90px;
-    color: white;
+    font-size:90px;
+    font-family:OpenSans-Bold,OpenSans;
+    font-weight:300;
+    color:rgba(255,255,255,1);
+    line-height:95px;    
   }
   .fd-home-best-del {
-    margin: 0;
-    padding: 0;
-    border: none;
-    line-height: 110px;
-    font-size: 90px;
-    color: white;
+    font-size:90px;
+    font-family:OpenSans-Bold,OpenSans;
+    font-weight:300;
+    color:rgba(255,255,255,1);
+    line-height:95px;    
   }
   
   .fd-home-best-buttons {
-    margin-top: 101px;
+    margin-top: 90px;      /* to text above */
     margin-bottom: 146px;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
     align-items: center;
   }
-  /* .fd-home-best-button1 a, */
-  /* .fd-home-best-button2 a, */
-  /* .fd-home-best-button2 a {
-    margin: 0;
-    padding: 0;
-  } */
   .fd-home-best-button1,
   .fd-home-best-button2,
   .fd-home-best-button3 {
@@ -336,7 +319,6 @@
   }
   .fd-home-best-buttons-img {
     margin-right: 15px; 
-    /* margin-left: 10px; ???   */
   }
 }
 @media (max-width: 1140px){
@@ -403,10 +385,13 @@
 }
 
 .fd-home-about-card-title {
+  font-size:40px;
+  font-family:OpenSans-Bold,OpenSans;
+  font-weight:bold;
+  color:rgba(51,51,51,1);
+  line-height:40px;
   padding-top: 116px;  /* to top 125 */
   padding-bottom: 20px;
-  font-size: 24px;
-  font-weight: bold;
 }
 .fd-home-about-card-imgs {
   max-width: 600px;
@@ -415,6 +400,10 @@
 }
 .fd-home-about-card-caption {
   height: 160px;
+  font-size:16px;
+  font-family:OpenSans;
+  color:rgba(51,51,51,1);
+  line-height:26px;
 }
 
 @media (max-width: 570px){
@@ -467,8 +456,8 @@
 /* to top 108px; to bottom 150px */
 .fd-home-our-content
 .card-group {
-  /* padding-top: 84px;  to top 108px; ??? */
-  padding-bottom: 40px;
+  padding-top: 80px;     /* to top 108px; */
+  padding-bottom: 120px;  /* to bottom */
 }
 .fd-home-our-content
 .card-group .card {
@@ -478,22 +467,41 @@
 }
 
 .fd-home-our-card-header {
-  font-size: 26px;
-  font-weight: bold;
+  font-size:40px;
+  font-family:OpenSans-Bold,OpenSans;
+  font-weight:bold;
+  color:rgba(51,51,51,1);
+  line-height:40px;
   text-align: center;
 }
 .fd-home-our-card-header-text {
+  font-size:16px;
+  font-family:OpenSans;
+  color:rgba(102,102,102,1);
+  line-height:22px;
   padding-left: 15%;
   padding-right: 15%;
 }
 .fd-home-our-card-title {
-  font-size: 18px;
-  font-weight: bold;
+  font-size:18px;
+  font-family:OpenSans-Bold,OpenSans;
+  font-weight:bold;
+  color:rgba(34,34,34,1);
+  line-height:24px;
+  /* font-size: 18px; */
+  /* font-weight: bold; */
   text-align: center;
 }
+.fd-home-our-card-text {
+  font-size:14px;
+  font-family:OpenSans-Semibold,OpenSans;
+  font-weight:600;
+  color:rgba(102,102,102,1);
+  line-height:19px;  
+}
 .fd-home-our-card-img {
-  margin-top: 78px;
-  margin-bottom: 10px;
+  margin-top: 28px;
+  margin-bottom: 33px;
 }
 
 
@@ -519,12 +527,12 @@
 
 .fd-home-our-app-download {
   margin-top: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 10px; /* title to text */
   font-size: 26px;
   font-weight: bold;
 }
 .fd-home-our-app-download-icon {
-  margin-top: 30px;
+  margin-top: 50px;    /* icon to text */
 }
 .fd-home-our-app-divl {
   display: inline-block;
@@ -570,22 +578,21 @@
   max-width: 1140px;
   margin: 0 auto;
 }
-
+                         /* height ??? */
 .fd-home-with-fantuan-cards {
   margin: 0;
   padding: 0;
-  padding-top: 131px;
-  padding-bottom: 120px;
+  padding-top: 105px;    /* to top */
+  padding-bottom: 90px;  /* to bottom */
 }
 .fd-home-with-fantuan-cards
 .card {
   margin: 0;
   padding: 0;
-  margin: 10px;
-  /* background-color: #FBFAF8; */
+  margin: 29px;   /* 58px between */
   background-color: white;
-  width: 541px;
-  height: 211px;
+  width: 541px;   /* width of card */
+  height: 211px;  /* hieght of card */
 }
 
 .fd-home-with-fantuan-cards
@@ -608,10 +615,13 @@
   align-items: center;
 }
 .fd-home-with-card-img {
-  width: 45px;
+  margin: 0;
+  padding: 0;
+  width: 63px;
   flex-grow: 1;
   align-self: center;
-  margin-right: 10px;
+  margin-left: 61px;
+  margin-right: 31px;
 }
 .fd-home-with-card-note {
   flex-grow: 1;
@@ -624,10 +634,19 @@
 }
 
 .fd-home-with-card-note-title {
+  font-size:24px;
+  font-family:OpenSans-Bold,OpenSans;
+  font-weight:bold;
+  color:rgba(51,51,51,1);
+  line-height:40px;
   text-align: left;
 }
 .fd-home-with-card-note-text {
-  text-align: left;
+  font-size:16px;
+  font-family:OpenSans;
+  color:rgba(102,102,102,1);
+  line-height:25px;
+    text-align: left;
 }
 .fd-home-with-card-link {
   text-align: left;
