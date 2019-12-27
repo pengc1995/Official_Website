@@ -359,9 +359,18 @@
     padding: 0;
     border: none;
 }
+.fd-partner-comment-card-div {
+    width: 534px;
+    height: 382px;
+    text-align: center;
+}
 .fd-partner-comment-card-imgs {
-    max-width: 550px;
-    width: 100%;
+    /* max-width: 550px;
+    width: 100%; */
+    width:auto;
+    height:auto;
+    max-width:100%;
+    max-height:100%;    
 }
 .fd-partner-comment-card-caption {
     width: 515px;       /* comment width */

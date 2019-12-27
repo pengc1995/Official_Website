@@ -384,5 +384,25 @@ const zh_CN = {
     fd_faq_member_h2: "2、积分有什么用？",
     fd_faq_member_p2: "进入点餐界面点击右下角“账户”，选择“积分”即可以相应积分兑换积分商城的礼品。",
 
+    // Dianping (点评)
+    // ==============
+
+    // header of dianping
+    dp_header_partner: "商务合作",
+    dp_header_foodinfo: "美食资讯",
+    dp_header_language: "English",
+
+    // Footer of dianping
+    dp_footer_fantuan: "饭团集团",
+    dp_footer_ftdelivery: "饭团外卖",
+    dp_footer_aboutus: "关于我们",
+    dp_footer_newsroom: "饭团新闻",
+    dp_footer_careers: "招聘频道",
+    dp_footer_foodnews: "美食文章",
+    dp_footer_partner: "商家合作",
+    dp_footer_contactus: "Contact Us",
+    dp_footer_policy: "服务条款",
+        
+
 }
 export default zh_CN;

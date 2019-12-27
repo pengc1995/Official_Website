@@ -384,5 +384,25 @@ const en_US = {
     fd_faq_member_p12: "3) Write reviews and collect points on our app!",
     fd_faq_member_h2: "2. What can I do with my points?",
     fd_faq_member_p2: "Go to the bottom right corner of the app and click on “Account,” then click on “Points” to see what you can exchange for your points",
+
+    // Dianping (点评)
+    // ==============
+
+    // header of dianping
+    dp_header_partner: "商务合作",
+    dp_header_foodinfo: "美食资讯",
+    dp_header_language: "English",
+
+    // Footer of dianping
+    dp_footer_fantuan: "Fantuan",
+    dp_footer_ftdelivery: "Delivery",
+    dp_footer_aboutus: "About Us",
+    dp_footer_newsroom: "Newsroom",
+    dp_footer_careers: "Careers",
+    dp_footer_foodnews: "Food news",
+    dp_footer_partner: "Partner",
+    dp_footer_contactus: "Contact Us",
+    dp_footer_policy: "Service Policy",
+        
 }
 export default en_US;

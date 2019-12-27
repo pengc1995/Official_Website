@@ -119,7 +119,9 @@ class DeliveryHome extends Component {
                     </Col>
                     <Col>
                       <img className="fd-home-about-card-imgs" src={ft.imgSrc} alt={ft.slideTitle}
-                          width="600px"
+                          // width="600px"
+                          // height="auto"
+                          width="auto"
                           height="588px"
                           alt={ft.slideTitle}/>
                     </Col>

@@ -383,14 +383,14 @@ class About extends Component {
                     <div className="ft-about-best-button12">
                         <Button className="ft-about-best-button1" onMouseMove={this.handleMouseMoveOnDelivery} variant="outline-light" href="/delivery">
                             <img className="ft-about-best-buttons-img" src={require('../../assets/imgs/icon/delivery/fantuan-delivery-logo-color@2x.png')}
-                            width="100%"
-                            height="42px"
+                            width="182"
+                            height="40px"
                             alt="To delivery"/>
                         </Button>
                         <Button className="ft-about-best-button2" onMouseMove={this.handleMouseMoveOnDianping} variant="outline-light" href="/dianping">
                             <img className="ft-about-best-buttons-img" src={require('../../assets/imgs/icon/dianping/fantuan-dianping-logo@2x.png')}
-                            width="100%"
-                            height="42px"
+                            width="165"
+                            height="43px"
                             alt="dianping"/>
                         </Button>
                     </div>

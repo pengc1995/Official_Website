@@ -226,10 +226,12 @@ class DeliveryPartner extends Component {
                       <div className="fd-partner-comment-card-title">{ft.slideTitle}</div>
                     </Col>
                     <Col>
+                    <div className="fd-partner-comment-card-div">
                       <img className="fd-partner-comment-card-imgs" src={ft.imgSrc} alt={ft.slideTitle}
-                      width="534px"
-                      height="382px"
+                      // width="534px"
+                      // height="382px"
                       />
+                      </div>
                     </Col>
                   </Row>
                 </Container>
