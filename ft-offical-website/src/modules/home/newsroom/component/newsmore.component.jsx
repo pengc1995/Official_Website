@@ -1,5 +1,6 @@
 /* Create by Chelly P */
 import React, { Component } from 'react';
+import { FormattedMessage} from 'react-intl';
 
 import NewsCard from './newscard.component';
 import NewsCollapse from './newscollapse.component';
@@ -19,45 +20,6 @@ class NewsMore extends Component {
         };
     }
 
-    // componentDidMount() {
-    //     console.log('hdfy')
-    //     let self=this;
-    //     axios({
-    //         method: 'get' ,
-    //         url: 'http://localhost:3000/news/display' ,
-    //     })
-    //     .then(function (response) {
-    //         console.log(response.data[4]['type']);
-    //         // console.log(JSON.stringify(response.data))
-    //         var target=JSON.stringify(response.data)
-    //         self.setState({indexList:target}, ()=>{
-    //             console.log(self.state.indexList);
-    //         })
-    //         // console.log(self.state.indexList);
-    //       })
-    //     .catch(function (error) {
-    //         console.log(error);
-    //       });
-        
-    // }
-    /* componentDidMount() {
-        console.log('hdfy')
-        axios({
-            method: 'get' ,
-            url: 'http://localhost:3000/news/display' ,
-        })
-        .then((response) => {
-            console.log(response.data[4]['type']);
-            // console.log(JSON.stringify(response.data))
-            var target=response.data
-            this.setState({indexList:target})
-            // console.log(self.state.indexList);
-          })
-        .catch((error) => {
-            console.log(error);
-          });
-    } */
-    
     componentWillMount() {
         this.setState({
             indexList: this.timeSorting()
@@ -81,8 +43,8 @@ class NewsMore extends Component {
         return (
             <div>
                 <div className='fh_news'>
-                    <h1 className='ft-w1140-section-fs40 fh_news_title'>Fantuan News</h1>
-                    <p className='ft-w1140-section-fs16 fh_news_title_contact'>Advertising information please contact us pr@fantuan.ca</p>
+                <h1 className='ft-w1140-section-fs40 fh_news_title'><FormattedMessage id="ft_news_title"/></h1>
+                <p className='ft-w1140-section-fs16 fh_news_title_contact'><FormattedMessage id="ft_news_contact"/></p>
                 </div>
 
                 <div className='fh_news_group'>

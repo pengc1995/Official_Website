@@ -40,7 +40,6 @@ class DeliveryPartner extends Component {
     super(props);
     this.state = {
       callerName: 'partner',
-      // carouselData: PartnerComments,
       partnerComments: PartnerComments,
       partnerCommentsZh: PartnerCommentsZh,
       adshowData: AdsShowData,
@@ -102,21 +101,14 @@ class DeliveryPartner extends Component {
         {/* partner with Fantuan */}
         <div className="fd-partner-with-bg">
           <div className="fd-partner-with-content">
-              <h1 className="ft-w1140-section-fs60 fd-partner-with-h1"><FormattedMessage id="fd_partner_with_header"/></h1>
-              <p className="fd-partner-with-p ft-w1140-text-fs18">
+              <div className=" fd-partner-with-h1"><FormattedMessage id="fd_partner_with_header"/></div>
+              <div className="fd-partner-with-p">
                 <div className="test-color">
                 <FormattedMessage id="fd_partner_with_text"/></div>
-              </p>
-              <p className="fd-partner-with-button">
-                {/* <Button variant="dark" href="link-1">
-                    <img className="fd-partner-with-button-img" src={require('../../assets/imgs/icon/delivery-deliver-document@2x.png')}
-                    width="21px"
-                    height="21px"
-                    alt="Join Now"/>
-                    Join Now
-                </Button> */}
+              </div>
+              <div className="fd-partner-with-button">
                 <JoinUs className="fd-partner-with-button"/>
-              </p>
+              </div>
           </div>
         </div>
 
@@ -128,8 +120,8 @@ class DeliveryPartner extends Component {
                 <Card className="col-sm-6">
                   <Card.Body className="fd-partner-more-card-body">
                     <img className="fd-partner-more-card-img" src={require('../../assets/imgs/icon/delivery/delivery-partner-more-customer@2x.png')}
-                      width="61px"
-                      height="58px"
+                      width="99px"
+                      height="94px"
                       alt="delivery on time"/>
                     <div className="fd-partner-more-card-note">
                       <Card.Title className="fd-partner-more-card-title"><FormattedMessage id="fd_partner_more_title1"/></Card.Title>
@@ -142,8 +134,8 @@ class DeliveryPartner extends Component {
                 <Card className="col-sm-6">
                 <Card.Body className="fd-partner-more-card-body">
                     <img className="fd-partner-more-card-img" src={require('../../assets/imgs/icon/delivery/delivery-partner-nocosts@2x.png')}
-                      width="61px"
-                      height="58px"
+                      width="105px"
+                      height="92px"
                       alt="delivery smarter"/>
                     <div className="fd-partner-more-card-note">
                       <Card.Title className="fd-partner-more-card-title"><FormattedMessage id="fd_partner_more_title2"/></Card.Title>
@@ -158,8 +150,8 @@ class DeliveryPartner extends Component {
                 <Card className="col-sm-6">
                   <Card.Body className="fd-partner-more-card-body">
                     <img className="fd-partner-more-card-img" src={require('../../assets/imgs/icon/delivery/delivery-partner-improve@2x.png')}
-                      width="61px"
-                      height="58px"
+                      width="97px"
+                      height="91px"
                       alt="delivery on time"/>
                     <div className="fd-partner-more-card-note">
                       <Card.Title className="fd-partner-more-card-title"><FormattedMessage id="fd_partner_more_title3"/></Card.Title>
@@ -172,8 +164,8 @@ class DeliveryPartner extends Component {
                 <Card className="col-sm-6">
                 <Card.Body className="fd-partner-more-card-body">
                     <img className="fd-partner-more-card-img" src={require('../../assets/imgs/icon/delivery/delivery-partner-assist@2x.png')}
-                      width="61px"
-                      height="58px"
+                      width="96px"
+                      height="97px"
                       alt="delivery smarter"/>
                     <div className="fd-partner-more-card-note">
                       <Card.Title className="fd-partner-more-card-title"><FormattedMessage id="fd_partner_more_title4"/></Card.Title>
@@ -221,20 +213,25 @@ class DeliveryPartner extends Component {
         <div className="fd-partner-comment-bg">
           <div className="fd-partner-comment-content">
           { this.state.widthOfWin >= 570 ?
-            <Carousel className="fd-partner-comment" interval="1500" controls="false" indicators="true" prevLabel="" nextLabel="" pauseOnHover="true" fade="true">
+            <Carousel className="fd-partner-comment" interval="4500" controls="false" indicators="true" prevLabel="" nextLabel="" pauseOnHover="true" fade="true">
               {carouselData.map((ft,index) =>
               <Carousel.Item key={index}>
                 <Container fluid="true" className="fd-partner-comment-con">
                   <Row noGutters="true">
                     <Col>
                       <div className="fd-partner-comment-card-caption">
-                        <p className="fd-partner-comment-card-quotation">&ldquo;</p>
-                        <p className="fd-partner-comment-card-note">{ft.slideCaption}</p>
+                        <div className="fd-partner-comment-card-quotation">“</div>
+                        <div className="fd-partner-comment-card-note">{ft.slideCaption}</div>
                       </div>
                       <div className="fd-partner-comment-card-title">{ft.slideTitle}</div>
                     </Col>
                     <Col>
-                      <img className="fd-partner-comment-card-imgs" src={ft.imgSrc} alt={ft.slideTitle}/>
+                    <div className="fd-partner-comment-card-div">
+                      <img className="fd-partner-comment-card-imgs" src={ft.imgSrc} alt={ft.slideTitle}
+                      // width="534px"
+                      // height="382px"
+                      />
+                      </div>
                     </Col>
                   </Row>
                 </Container>
@@ -242,7 +239,7 @@ class DeliveryPartner extends Component {
               )}
             </Carousel>
             :
-            <Carousel className="fd-partner-comment" interval="1500" controls="true" indicators="false" pauseOnHover="true" fade="true">
+            <Carousel className="fd-partner-comment" interval="4500" controls="true" indicators="false" pauseOnHover="true" fade="true">
               {carouselData.map((ft,index) =>
               <Carousel.Item key={index}>
                 <Container fluid="true" className="fd-partner-comment-con">
@@ -254,8 +251,8 @@ class DeliveryPartner extends Component {
                   <Row>
                     <Col>
                       <div className="fd-partner-comment-card-caption">
-                        <p className="fd-partner-comment-card-quotation">&ldquo;</p>
-                        <p className="fd-partner-comment-card-note">{ft.slideCaption}</p>
+                        <div className="fd-partner-comment-card-quotation">&ldquo;</div>
+                        <div className="fd-partner-comment-card-note">{ft.slideCaption}</div>
                       </div>
                       <div className="fd-partner-comment-card-title">{ft.slideTitle}</div>
                     </Col>
@@ -282,9 +279,9 @@ class DeliveryPartner extends Component {
               <CardDeck className="row cardDeckRow">
                 <Card className="col-sm-6">
                   <Card.Body>
-                    <img className="fd-partner-4steps-img" src={require('../../assets/imgs/icon/delivery/delivery-partner-4steps@2x.png')}
-                          width="61px"
-                          height="58px"
+                    <img className="fd-partner-4steps-img" src={require('../../assets/imgs/icon/delivery/delivery-partner-4steps-contact@2x.png')}
+                          width="72px"
+                          height="69px"
                           alt="delivery partner step 1"/>
                     <Card.Title className="text-center fd-partner-4steps-subtitle"><FormattedMessage id="fd_partner_4steps_title1"/></Card.Title>
                     <Card.Text className="fd-partner-4steps-text">
@@ -294,9 +291,9 @@ class DeliveryPartner extends Component {
                 </Card>
                 <Card className="col-sm-6">
                 <Card.Body>
-                <img className="fd-partner-4steps-img" src={require('../../assets/imgs/icon/delivery/delivery-partner-4steps@2x.png')}
-                          width="61px"
-                          height="58px"
+                <img className="fd-partner-4steps-img" src={require('../../assets/imgs/icon/delivery/delivery-partner-4steps-sign@2x.png')}
+                          width="72px"
+                          height="69px"
                           alt="delivery partner step 2"/>
                   <Card.Title className="text-center fd-partner-4steps-subtitle"><FormattedMessage id="fd_partner_4steps_title2"/></Card.Title>
                   <Card.Text className="fd-partner-4steps-text">
@@ -306,9 +303,9 @@ class DeliveryPartner extends Component {
                 </Card>
                 <Card className="col-sm-6">
                   <Card.Body>
-                  <img className="fd-partner-4steps-img" src={require('../../assets/imgs/icon/delivery/delivery-partner-4steps@2x.png')}
-                          width="61px"
-                          height="58px"
+                  <img className="fd-partner-4steps-img" src={require('../../assets/imgs/icon/delivery/delivery-partner-4steps-install@2x.png')}
+                          width="72px"
+                          height="69px"
                           alt="delivery partner step 3"/>
                     <Card.Title className="text-center fd-partner-4steps-subtitle"><FormattedMessage id="fd_partner_4steps_title3"/></Card.Title>
                     <Card.Text className="fd-partner-4steps-text">
@@ -318,9 +315,9 @@ class DeliveryPartner extends Component {
                 </Card>
                 <Card className="col-sm-6">
                 <Card.Body>
-                <img className="fd-partner-4steps-img fd-partner-4steps-img-4" src={require('../../assets/imgs/icon/delivery/delivery-partner-4steps@2x.png')}
-                          width="61px"
-                          height="58px"
+                <img className="fd-partner-4steps-img fd-partner-4steps-img-4" src={require('../../assets/imgs/icon/delivery/delivery-partner-4steps-online@2x.png')}
+                          width="72px"
+                          height="69px"
                           alt="delivery partner step 4"/>
                   <Card.Title className="text-center fd-partner-4steps-subtitle"><FormattedMessage id="fd_partner_4steps_title4"/></Card.Title>
                   <Card.Text className="fd-partner-4steps-text">
@@ -331,15 +328,7 @@ class DeliveryPartner extends Component {
               </CardDeck>
               </Card>
             </CardGroup>
-            <h1 className="fd-partner-4step-getstart"><FormattedMessage id="fd_partner_4steps_start"/></h1>
             <div className="fd-partner-4step-button">
-                {/* <Button className="fd-partner-4step-join" href="link-1">
-                    <img className="fd-partner-with-button-img" src={require('../../assets/imgs/icon/delivery-deliver-document@2x.png')}
-                    width="21px"
-                    height="21px"
-                    alt="Join Now"/>
-                    Join Now
-                </Button> */}
                 <JoinUs className="fd-partner-with-button"/>
             </div>
           </div>
@@ -350,22 +339,13 @@ class DeliveryPartner extends Component {
           <div className="fd-partner-advert-content">
               <Card className="col-auto">
                 <Card.Body className="fd-partner-advert-card">
-                  <h5 className="text-center fd-partner-advert-title"><FormattedMessage id="fd_partner_advert_title"/></h5>
-                  <p className="fd-partner-advert-text">
-                    <FormattedMessage id="fd_partner_advert_text"/>
-                  </p>
+                  <div className="text-center fd-partner-advert-title"><FormattedMessage id="fd_partner_advert_title"/></div>
+                  <div className="fd-partner-advert-text"><FormattedMessage id="fd_partner_advert_text"/></div>
                   <div className="fd-partner-advert-buttons">
-                    <p className="fd-partner-advert-button">
-                      {/* <Button className="fd-partner-advert-contact" href="link-1">
-                          <img className="fd-partner-advert-button-img" src={require('../../assets/imgs/icon/delivery-deliver-document@2x.png')}
-                          width="16px"
-                          height="16px"
-                          alt="Join Now"/>
-                          Contact Now
-                      </Button> */}
+                    <div className="fd-partner-advert-button">
                       <ContactNow/>
-                    </p>
-                    <p className="fd-partner-advert-button">
+                    </div>
+                    <div className="fd-partner-advert-button">
                       <Button className="fd-partner-advert-media" href="link-1">
                           <img className="fd-partner-advert-button-img" src={require('../../assets/imgs/icon/delivery-deliver-document@2x.png')}
                           width="16px"
@@ -373,7 +353,7 @@ class DeliveryPartner extends Component {
                           alt="Join Now"/>
                           Media Kit
                       </Button>
-                    </p>
+                    </div>
                   </div>
                 </Card.Body>
               </Card>
@@ -384,12 +364,12 @@ class DeliveryPartner extends Component {
         <div className="fd-partner-adshow-bg">
           <div className="fd-partner-adshow-content">
           <BrainCarousel
-              slidesPerPage={4}
+              slidesPerPage={7}
               slidesPerScroll={1}
-              itemWidth={50}
-              offset={260}
-              autoPlay={2000}
-              animationSpeed={1000}
+              itemWidth={105}
+              offset={170}
+              autoPlay={3000}
+              animationSpeed={3000}
               // centered
               infinite
               breakpoints={{
@@ -414,7 +394,7 @@ class DeliveryPartner extends Component {
             {this.state.adshowData.map((ft,index) =>
               <div key={index}>
               <img className="fd-partner-adshow-imgs" src={ft.imgSrc}
-                width="130px"
+                width="105px"
                 height="auto"
                 alt={ft.slideTitle}/>
               </div>

@@ -36,8 +36,6 @@ class DeliveryHome extends Component {
       callerName: 'home',
       aboutUsCarouselData: AboutUsCarouselData,
       aboutUsCarouselDataZh: AboutUsCarouselDataZh,
-      // cdata: () => {this.props.lang === 'en' ? AboutUsCarouselData:AboutUsCarouselDataZh},
-      // cdata: [],
       widthOfWin: window.innerWidth,
       heightOfWin: window.innerHeight
     };
@@ -111,18 +109,19 @@ class DeliveryHome extends Component {
           <div className="fd-home-about-content">
           { this.state.widthOfWin >= 570 ?
             <Carousel className="fd-home-about" interval="3500" controls="false" indicators="true" prevLabel="" nextLabel="" pauseOnHover="true" fade="true">
-              {/* {this.state.cdata.map((ft,index) => */}
               {cdata.map((ft,index) =>
                 <Carousel.Item key={index}>
                 <Container fluid="true" className="fd-home-about-con">
                   <Row noGutters="true">
                     <Col>
-                      <div className="fd-home-about-card-title ft-w1140-section-fs40">{ft.slideTitle}</div>
-                      <div className="fd-home-about-card-caption ft-w1140-text-fs16">{ft.slideCaption}</div>
+                      <div className="fd-home-about-card-title">{ft.slideTitle}</div>
+                      <div className="fd-home-about-card-caption">{ft.slideCaption}</div>
                     </Col>
                     <Col>
                       <img className="fd-home-about-card-imgs" src={ft.imgSrc} alt={ft.slideTitle}
-                          width="600px"
+                          // width="600px"
+                          // height="auto"
+                          width="auto"
                           height="588px"
                           alt={ft.slideTitle}/>
                     </Col>
@@ -133,7 +132,6 @@ class DeliveryHome extends Component {
             </Carousel>
             :
             <Carousel className="fd-home-about" interval="3500" controls="true" indicators="false" pauseOnHover="true" fade="true">
-              {/* {this.state.cdata.map((ft,index) => */}
               {cdata.map((ft,index) =>
                 <Carousel.Item key={index}>
                 <Container fluid="true" className="fd-home-about-con">
@@ -162,50 +160,44 @@ class DeliveryHome extends Component {
             <CardGroup>
               <Card>
                 <Card.Body>
-                    <Card.Title className="fd-home-our-card-header ft-w1140-section-fs40"><FormattedMessage id="fd_home_our_header"/></Card.Title>
-                    <Card.Text className="fd-home-our-card-header-text ft-w1140-section-fs16">
+                    <Card.Title className="fd-home-our-card-header"><FormattedMessage id="fd_home_our_header"/></Card.Title>
+                    <Card.Text className="fd-home-our-card-header-text">
                       <FormattedMessage id="fd_home_our_text"/> 
                     </Card.Text>
                 </Card.Body>
                 <CardDeck>
                     <Card className="col-sm-6">
                         <Card.Body>
-                            <img className="fd-home-our-card-img" src={require('../../assets/imgs/icon/delivery-on-time@2x.png')}
-                              // width="59px"
-                              // height="56px"
+                            <img className="fd-home-our-card-img" src={require('../../assets/imgs/icon/delivery/delivery-home-our-fast@2x.png')}
                               width="95px"
                               height="90px"
                               alt="delivery on time"/>
-                            <Card.Title className="fd-home-our-card-title ft-w1140-smtext-fs18"><FormattedMessage id="fd_home_our_header1"/></Card.Title>
-                            <Card.Text className="ft-w1140-text-fs14">
+                            <Card.Title className="fd-home-our-card-title"><FormattedMessage id="fd_home_our_header1"/></Card.Title>
+                            <Card.Text className="fd-home-our-card-text">
                               <FormattedMessage id="fd_home_our_text1"/>
                             </Card.Text>
                         </Card.Body>
                     </Card>
                     <Card className="col-sm-6">
                     <Card.Body>
-                            <img className="fd-home-our-card-img" src={require('../../assets/imgs/icon/delivery-smarter@2x.png')}
-                              // width="61px"
-                              // height="58px"
+                            <img className="fd-home-our-card-img" src={require('../../assets/imgs/icon/delivery/delivery-home-our-real@2x.png')}
                               width="95px"
                               height="90px"
                               alt="delivery smarter"/>
-                            <Card.Title className="fd-home-our-card-title ft-w1140-smtext-fs18"><FormattedMessage id="fd_home_our_header2"/></Card.Title>
-                            <Card.Text className="ft-w1140-text-fs14">
+                            <Card.Title className="fd-home-our-card-title"><FormattedMessage id="fd_home_our_header2"/></Card.Title>
+                            <Card.Text className="fd-home-our-card-text">
                               <FormattedMessage id="fd_home_our_text2"/> 
                             </Card.Text>
                         </Card.Body>
                     </Card>
                     <Card className="col-sm-6">
                         <Card.Body>
-                          <img className="fd-home-our-card-img" src={require('../../assets/imgs/icon/delivery-gain-time@2x.png')}
-                              // width="59px"
-                              // height="56px"
+                          <img className="fd-home-our-card-img" src={require('../../assets/imgs/icon/delivery/delivery-home-our-various@2x.png')}
                               width="95px"
                               height="90px"
                               alt="gain time"/>
-                            <Card.Title className="fd-home-our-card-title ft-w1140-smtext-fs18"><FormattedMessage id="fd_home_our_header3"/></Card.Title>
-                            <Card.Text className="ft-w1140-text-fs14">
+                            <Card.Title className="fd-home-our-card-title"><FormattedMessage id="fd_home_our_header3"/></Card.Title>
+                            <Card.Text className="fd-home-our-card-text">
                               <FormattedMessage id="fd_home_our_text3"/>
                             </Card.Text>
                         </Card.Body>
@@ -246,24 +238,22 @@ class DeliveryHome extends Component {
             </div>
           </div>
         </div>
-        {/* <img className="d-block w-100" src="/imgs/test/delivery-home.png" alt="for test only!"/> */}
 
         {/* with Fantuan */}
         <div className="fd-home-with-fantuan-bg">
           <div className="fd-home-with-fantuan-content">
             <CardDeck className="fd-home-with-fantuan-cards">
-              <Card className="col-sm-6">
+              <Card className="fd-home-with-card-left col-sm-6">
               <Card.Link className="fd-home-with-card-link" href="partner">
                 <Card.Body className="fd-home-with-fantuan-card-body">
-                {/* <Card.Link className="fd-home-with-card-link" href="partner"> */}
                   <div className="fd-home-with-card-content">
                   <img className="fd-home-with-card-img" src={require('../../assets/imgs/icon/delivery/delivery-home-partner.svg')}
                       width="65px"
                       height="56px"
                       alt="mobile phone"/>
                   <div className="fd-home-with-card-note">
-                    <Card.Title className="fd-home-with-card-note-title ft-w1140-section-fs24"><FormattedMessage id="fd_home_with_header1"/></Card.Title>
-                    <Card.Text className="fd-home-with-card-note-text ft-w1140-section-fs16">
+                    <Card.Title className="fd-home-with-card-note-title"><FormattedMessage id="fd_home_with_header1"/></Card.Title>
+                    <Card.Text className="fd-home-with-card-note-text">
                       <FormattedMessage id="fd_home_with_text1"/>
                     </Card.Text>
                     <img className="fd-home-with-card-link-img" src={require('../../assets/imgs/icon/delivery/delivery-home-arrow@2x.png')}
@@ -272,22 +262,20 @@ class DeliveryHome extends Component {
                         alt="mobile phone"/>
                   </div>
                   </div>
-                  {/* </Card.Link> */}
                 </Card.Body>
                 </Card.Link>
               </Card>
               <Card className="col-sm-6">
               <Card.Link className="fd-home-with-card-link" href="deliver">
                 <Card.Body className="fd-home-with-fantuan-card-body">
-                {/* <Card.Link className="fd-home-with-card-link" href="deliver"> */}
                 <div className="fd-home-with-card-content">
                   <img className="fd-home-with-card-img" src={require('../../assets/imgs/icon/delivery/delivery-home-drive.svg')}
                       width="65px"
                       height="56px"
                       alt="mobile phone"/>
                   <div className="fd-home-with-card-note">
-                    <Card.Title className="fd-home-with-card-note-title ft-w1140-section-fs24"><FormattedMessage id="fd_home_with_header2"/></Card.Title>
-                    <Card.Text className="fd-home-with-card-note-text ft-w1140-section-fs16">
+                    <Card.Title className="fd-home-with-card-note-title"><FormattedMessage id="fd_home_with_header2"/></Card.Title>
+                    <Card.Text className="fd-home-with-card-note-text">
                       <FormattedMessage id="fd_home_with_text2"/>
                     </Card.Text>
                     <img className="fd-home-with-card-link-img" src={require('../../assets/imgs/icon/delivery/delivery-home-arrow@2x.png')}
@@ -296,7 +284,6 @@ class DeliveryHome extends Component {
                         alt="mobile phone"/>
                   </div>
                   </div>
-                  {/* </Card.Link> */}
                 </Card.Body>
                 </Card.Link>
               </Card>
@@ -310,7 +297,6 @@ class DeliveryHome extends Component {
   }
 }
 
-// export default DeliveryHome;
 function mapStateToProps(state){
   return{
     lang: state.locale.lang

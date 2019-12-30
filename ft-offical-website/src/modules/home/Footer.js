@@ -22,25 +22,25 @@ class Footer extends Component {
 
                <div className="ft-footer-group-1">
                     <div className="ft-footer-1 ft-footer-1to4">
-                        <Nav.Link className="ft-footer-links ft-w1140-button-fs16" href="delivery"><FormattedMessage id="ft_footer_ftdelivery"/></Nav.Link>
-                        <Nav.Link className="ft-footer-links ft-w1140-button-fs16" href="dianping"><FormattedMessage id="ft_footer_ftdianping"/></Nav.Link>
+                        <Nav.Link className="ft-footer-links" href="delivery"><FormattedMessage id="ft_footer_ftdelivery"/></Nav.Link>
+                        <Nav.Link className="ft-footer-links" href="dianping"><FormattedMessage id="ft_footer_ftdianping"/></Nav.Link>
                     </div>
                     <div className="ft-footer-2 ft-footer-1to4">
-                        <Nav.Link className="ft-footer-links ft-w1140-button-fs16" href="/about"><FormattedMessage id="ft_footer_aboutus"/></Nav.Link>
-                        <Nav.Link className="ft-footer-links ft-w1140-button-fs16" href="/news"><FormattedMessage id="ft_footer_newsroom"/></Nav.Link>
-                        <Nav.Link className="ft-footer-links ft-w1140-button-fs16" href="/career"><FormattedMessage id="ft_footer_careers"/></Nav.Link>
+                        <Nav.Link className="ft-footer-links" href="/about"><FormattedMessage id="ft_footer_aboutus"/></Nav.Link>
+                        <Nav.Link className="ft-footer-links" href="/news"><FormattedMessage id="ft_footer_newsroom"/></Nav.Link>
+                        <Nav.Link className="ft-footer-links" href="/career"><FormattedMessage id="ft_footer_careers"/></Nav.Link>
                     </div>
                     <div className="ft-footer-3 ft-footer-1to4">
-                        <Nav.Link className="ft-footer-links ft-w1140-button-fs16" href="/about#contactusid"><FormattedMessage id="ft_footer_contactus"/></Nav.Link>
-                        <Nav.Link className="ft-footer-links ft-w1140-button-fs16" href="link-1"><FormattedMessage id="ft_footer_policy"/></Nav.Link>
+                        <Nav.Link className="ft-footer-links" href="/about#contactusid"><FormattedMessage id="ft_footer_contactus"/></Nav.Link>
+                        <Nav.Link className="ft-footer-links" href="link-1"><FormattedMessage id="ft_footer_policy"/></Nav.Link>
                     </div>
                     <div className="ft-footer-4 ft-footer-1to4">
-                        <Nav.Link className="ft-footer-links ft-w1140-button-fs16" href="/partner"><FormattedMessage id="ft_footer_partner"/></Nav.Link>
-                        <Nav.Link className="ft-footer-links ft-w1140-button-fs16" href="/deliver"><FormattedMessage id="ft_footer_driver"/></Nav.Link>
+                        <Nav.Link className="ft-footer-links" href="/partner"><FormattedMessage id="ft_footer_partner"/></Nav.Link>
+                        <Nav.Link className="ft-footer-links" href="/deliver"><FormattedMessage id="ft_footer_driver"/></Nav.Link>
                     </div>
                     <div className="ft-footer-5">
                         <div className="ft-footer-5-div-1">
-                            <div className="ft-w1140-button-fs16 ft-footer-5-media"><FormattedMessage id="ft_footer_suggest"/></div>
+                            <div className="ft-footer-5-media"><FormattedMessage id="ft_footer_suggest"/></div>
                             <div className="ft-w1140-button-fs16 ft-footer-5-email">feedback@fantuan.ca</div>
                         </div>
                         <div className="ft-footer-5-div-2">

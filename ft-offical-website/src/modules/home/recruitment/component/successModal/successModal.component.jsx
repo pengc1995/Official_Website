@@ -1,46 +1,38 @@
-import React, { Component } from 'react';
-import { Modal } from 'antd';
+import React, {useState } from 'react';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+import Check from '../../images/check.png';
 
 import './successModal.component.style.css';
 
-class SuccessModal extends Component {
-  constructor(props){
-    super(props)
-  }
-  handleCancel = () => {
-    this.props.getVisibility(false);
-  };
+const SuccessModal = () => {
+  const [show, setShow] = useState(false);
 
-  render() {
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
-    <div>
-        <Modal
-          visible={true}
-          onOk={this.handleOk}
-          onCancel={this.handleCancel}
-          closable={false}
-          footer={ null }
-          width='597px'
-        >
-          <div className='s_modal_body'>
-            <p className='s_modal_title'>Thank You</p>
-            <p className='s_modal_subtitle'>Submit Completed</p>
+    <>
+      <Button variant="primary" onClick={handleShow}>
+        开始使用
+      </Button>
 
-            <div className='s_modal_image'>
-              <img src={require('../../images/check.png')} style={{width:'161px', height:'161px'}}/>
-            </div>
-
-            <p className='s_modal_content'>We will Contact you within 7 working days by Email</p>
-
-            <hr style={{padding:'0', margin:'0'}}/>
-            <button className='s_modal_cancel_button' onClick={this.handleCancel}>
-              Close
-            </button>
+      <Modal show={show} onHide={handleClose} dialogClassName="modal_size">
+        <Modal.Body>
+          <div>
+            <h2>Thank You</h2>
+            <h2>Submit Completed</h2>
+            <img src={Check} alt="broken picture" height="135px" width="135px" />
+            <p>We will Contact you within 7 working days by Email</p>
           </div>
-
-        </Modal>
-      </div>
-    );
-  }
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </>
+  )
 }
 export default SuccessModal;

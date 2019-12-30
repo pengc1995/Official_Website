@@ -19,13 +19,9 @@
     margin: 0 auto;
     height: 590px;
     position: relative;
-    padding-top: 20px; 
+    padding-top: 80px;     /* to top */ 
     padding-bottom: 35px;
     color: white;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    justify-content: center;
   }
 
 @media (max-width: 375px){
@@ -114,14 +110,18 @@
 }
 @media (min-width: 993px){
     .fd-partner-with-h1 {
+        font-size: 60px;
+        font-weight: bold;
         color: white;
+        margin: 0;
+        margin-bottom: 5px; /* to title */
     }  
     .fd-partner-with-p {
-        margin-top: 10px;
-        margin-bottom: 30px;
-        width: 45%;
         font-size: 18px;
-        line-height: 24px;
+        color: white;
+        margin: 0;
+        margin-bottom: 80px;
+        width: 45%;
     }  
     .fd-partner-with-button a {
         background-color: #13C2C2;
@@ -152,14 +152,20 @@
     margin: 0 auto;
     position: relative;
     padding-top: 20px; 
-    padding-bottom: 30px;
 }
 
+.fd-partner-more-content
+.card-group {
+    padding: 0;
+    padding-top: 90px;    /* to top */
+    padding-bottom: 75px; /* to bottom */
+}
 .fd-partner-more-content
 .card-group .card {
     border: none;
     text-align: left;
     background-color: #FFFFFF;
+    padding-bottom: 20px;
 }
   
 .fd-partner-more-card-body {
@@ -171,17 +177,19 @@
 .fd-partner-more-card-title {
     font-size: 21px;
     font-weight: bold;
+    color: #333333;
     text-align: left;
 }
 .fd-partner-more-card-note
 .card-text {
     font-size: 16px;
+    color: #666666;
 }
 .fd-partner-more-card-img {
     max-height: 100%;
     max-width: 100%;
     vertical-align: middle;
-    margin-right: 10px;
+    margin-right: 31px;
     flex-grow: 1;
     align-self: center;
     /* border: dashed 1px; */
@@ -243,14 +251,17 @@
 
 .fd-partner-countup-box
 .exam-div div {
-    font-size: 40px;
-    color: white;
+    font-size: 44px;
+    font-weight: bold;
+    color: #FFFFFF;
     text-align: center;
  }
 
  .fd-partner-countup-title {
-     color: white;
      font-size: 20px;
+     font-weight: bold;
+     color:#FFFFFF;
+     padding-top: 16px;
  }
  .fd-partner-countup-p {
      color: white;
@@ -305,8 +316,8 @@
     max-width: 1140px;
     margin: 0 auto;
     position: relative;
-    padding-top: 90px; 
-    padding-bottom: 90px;
+    height: 633px;
+    padding-top: 124px;       /* to top */ 
 }
 .fd-partner-comment-content::after{
     display:block;
@@ -336,8 +347,8 @@
     width: 39px;
     /* border-radius: 9px; */
     border-radius: 7px;
-    background-color:  #FBFAF8;
-    border: solid 1px #13C2C2;
+    background-color:  #FFFFFF;
+    border: solid 2px #BBBBBB;
   }
 .fd-partner-comment .carousel-indicators li.active {
     background-color: #13C2C2;
@@ -348,27 +359,47 @@
     padding: 0;
     border: none;
 }
+.fd-partner-comment-card-div {
+    width: 534px;
+    height: 382px;
+    text-align: center;
+}
 .fd-partner-comment-card-imgs {
-    max-width: 550px;
-    width: 100%;
+    /* max-width: 550px;
+    width: 100%; */
+    width:auto;
+    height:auto;
+    max-width:100%;
+    max-height:100%;    
 }
 .fd-partner-comment-card-caption {
-    height: 160px;
+    width: 515px;       /* comment width */
+    height: 156px;      /* comment hedight */
+    position: relative;
 }
 .fd-partner-comment-card-quotation {
     margin: 0;
     padding: 0;
-    font-size: 48px;
-    color: #13C2C2;
-    line-height: 40px;
+    font-size:48px;
+    font-family:PingFangSC-Semibold,PingFang SC;
+    font-weight:600;
+    color:rgba(19,194,194,1);
+    line-height:45px;
+    position: absolute;
 }
 .fd-partner-comment-card-note {
+    padding: 0;
     font-size: 18px;
+    color: #666666;
+    height: 224px;      /* 156+68=224 */
+    position: absolute;
+    top:27px;
 }
 .fd-partner-comment-card-title {
     padding-top: 110px;
     font-size: 18px;
     font-weight: bold;
+    color: #666666;
 }
   
 @media (max-width: 570px){
@@ -464,9 +495,8 @@
     max-width: 1140px;
     margin: 0 auto;
     position: relative;
-    padding-top: 20px; 
-    padding-bottom: 35px;
-    color: black;
+    padding-top: 80px;      /* to top */
+    padding-bottom: 105px;  /* to bottom */
 }
 .fd-partner-4steps-content::after{
     display:block;
@@ -483,17 +513,28 @@
 .card-group {
     padding: 0;
 }
-.fd-partner-4steps-title {
-    color: black;
-    font-size: 40px;
+
+.fd-partner-4steps-content
+.card-group .card {
+    border: none;
+    text-align: center;
 }
-.fd-partner-4steps-subtitle {
-    color: black;
-    font-size: 18px;
+
+.fd-partner-4steps-title {
+    font-size: 40px;
+    font-weight: bold;
+    color:#333333;
 }
 .fd-partner-4steps-text {
-    color: black;
+    color:#333333;
     font-size: 14px;
+    padding-bottom: 60px; /* text to 4 icons */
+}
+.fd-partner-4steps-subtitle {
+    font-size: 18px;
+    font-weight: bold;
+    color:#333333;
+    padding-top: 25px;    /* 4 icons to 4 titles */
 }
 
 .fd-partner-4steps-img {
@@ -509,8 +550,9 @@
     top: 50%;
     
 }
-/* ??????? */
-
+.fd-partner-4step-button {
+    padding-top: 24px;     /* to text upper */
+}
 
 .fd-partner-4steps-img-4{
     /* fill: #13C2C2; */
@@ -534,35 +576,37 @@
 /* ====== */
 
 .fd-partner-advert-bg {
-    background-color: #FEFCF9;
-
+    /* background-color: #FEFCF9; */
     background-image: url("../../assets/imgs/bg/delivery-partner-contact-now.png");
     background-size: cover;
     background-repeat: no-repeat;
-
+    padding-top: 90px;     /* to top */
+    padding-bottom: 130px; /* to bottom */
 }
 .fd-partner-advert-content {
     max-width: 1140px;
     margin: 0 auto;
-    position: relative;
-    padding-top: 40px; 
-    padding-bottom: 35px;
-    color: black;
+}
+
+.fd-partner-advert-content .card {
+    border: none;
+    text-align: center;
 }
 
 .fd-partner-advert-title {
     font-size: 36px;
+    font-weight: bold;
+    color: #333333;
     text-align: center;
 }
 .fd-partner-advert-text {
-    margin: 0;
-    padding: 0;
-    text-align: center;
     font-size: 16px;
+    color: #666666;
+    text-align: center;
+    padding-top: 10px;       /* to title above */
 }
 .fd-partner-advert-content
 .card {
-    background-color: #FEFCF9;
     background-color:rgba(0,0,0,0)
 }
 
@@ -595,14 +639,10 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding-top: 20px;
-    padding-bottom: 30px;
+    padding-top: 40px;     /* to text above */
 }
 .fd-partner-advert-button {
-    padding: 0;
-    margin: 10px;
-    width: 170px;
-    height: 54px;
+    margin-right: 10px;
 }
 
 
@@ -616,7 +656,7 @@
     max-width: 1140px;
     margin: 0 auto;
     position: relative;
-    padding-top: 40px; 
-    padding-bottom: 35px;
+    padding-top: 65px; 
+    padding-bottom: 65px;
 }
 

@@ -29,7 +29,9 @@ render() {
         <Header callerName={this.state.callerName}/>    
 
         <div className="ft-news-bg">
-        <NewsMore />
+          <div className='container'>
+              <NewsMore />
+          </div>
         </div>
 
         <Footer/>

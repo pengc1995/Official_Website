@@ -41,6 +41,21 @@ const PartnerComments = [{
     "imgSrc":"/imgs/delivery/delivery-partner-comment-baiyulan.jpg",
     "slideTitle":"BAIYULAN",
     "slideCaption":"After partnering with Fantuan, our restaurant has attracted more and more customers. They also helped us with marketing and promotion. I am very satisfied with their service."
+  },{
+    "id":"8",
+    "imgSrc":"/imgs/delivery/delivery-partner-comment-whyte.jpg",
+    "slideTitle":"Whyte House Cafe",
+    "slideCaption":"Fantuan is our friendly partner. Whyte House Cafe, as a well-known local dessert shop, always pays attention to the appearance, quality and taste of food. Fantuan's delivery efficiency and high quality service ensure that our meals get delivered to our customers in good condition, assuring us that Fantuan will help us deliver our meals properly."
+  },{
+    "id":"9",
+    "imgSrc":"/imgs/delivery/delivery-partner-comment-yunzhinan.jpg",
+    "slideTitle":"South Silk Road",
+    "slideCaption":"Yunnan South has been committed to presenting authentic Yunnan, Guizhou and Hunan cuisine, as well as profound Chinese food culture to overseas travelers and local diners who love traditional Chinese food. We make our delicacies with love, and with Fantuan, customers can finally get a truly seamless door-to-door food connection!"
+  },{
+    "id":"10",
+    "imgSrc":"/imgs/delivery/delivery-partner-comment-onepot.jpg",
+    "slideTitle":"One Pot",
+    "slideCaption":"Tempting food is the soul of our restaurant, and excellent service is the icing on the cake! Fantuan's contribution helps our restaurant build a bridge with the customers, allowing us to share our passion for food with everyone we serve."
 }]
 
 export default PartnerComments;

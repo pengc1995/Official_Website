@@ -15,7 +15,7 @@
     margin: 0;
     padding: 0;
     padding-top: 70px;
-    padding-bottom: 60px;
+    padding-bottom: 30px;
     max-width: 1140px;
     margin: 0 auto;
 }
@@ -78,6 +78,10 @@
     margin: 0;
     padding: 0;
     height: 43px;
+    margin-top: 32px;   /* to email 39px */
+}
+.fd-footer-5-google a{
+    margin-right: 5px;
 }
 /* .fd-footer-5-google:hover,
 .fd-footer-5-appstore:hover {
@@ -93,7 +97,7 @@
 
 .fd-footer-hr {
     width: 100%;
-    margin-top: 36px;
+    margin-top: 75px;   /* to icon 79px */
     border: 1px solid;
     color:#283F4F;
 }
@@ -166,7 +170,7 @@
 
 @media (max-width: 1140px){
     .fd-footer-content {
-      padding-right: 10px;  
-      padding-left: 10px;
+      padding-right: 20px;  
+      padding-left: 20px;
     }
 }

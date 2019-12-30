@@ -17,10 +17,11 @@
     font-weight:bold;
     line-height:19px;
 }
+.ft_ad_modal_button:hover {
+    opacity: 0.8;
+}
 .ft_ad_modal_button_icon {
-    width: 21px;
-    height: 21px;
-    margin-right: 10px;
+    padding-right: 10px;
 }
 
 .ft_ad_modal_title {

@@ -1,5 +1,6 @@
 /* Create by Chelly P */
 import React, { useState } from 'react';
+import { FormattedMessage} from 'react-intl';
 
 import Collapse from 'react-bootstrap/Collapse';
 import Button from 'react-bootstrap/Button';
@@ -22,7 +23,7 @@ function NewsCollapse(props) {
               aria-controls="example-collapse-text"
               aria-expanded={open}
             >
-              View more
+              <FormattedMessage id="ft_news_viewmore"/>
             </Button>
             <hr className='fh_news_view_more_decoration_line' />
         </div>
