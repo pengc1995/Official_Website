@@ -41,9 +41,10 @@ class SlideShow extends Component {
     render() {
         const settings_1 = {
             className: "center",
+            focusOnSelect: true,
             centerMode: true,
             infinite: true,
-            centerPadding: "125spx",
+            centerPadding: "120spx",
             infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -80,7 +81,7 @@ class SlideShow extends Component {
                     {
                         this.state.indexList.slice(0, 3).map((carousel, index) => (
                             // <Link key={index} to={`/Recruitment/news_details/${carousel.id}`}>
-                            <Link key={index} to={`/career/news_details/${carousel.id}`}>
+                            <Link /* key={index} to={`/career/news_details/${carousel.id}`} */>
                                 <img key={index} src={carousel.cover} className='fh_rec_carousel_img' />
                             </Link>
                         )

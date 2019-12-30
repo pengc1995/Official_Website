@@ -42,7 +42,7 @@
 
   .center .slick-center img {
     opacity: 1;
-    margin: 0 0 0 -25px;
+    cursor: default;
     /* transform: scale(1.08); */
   }
   .center img{
