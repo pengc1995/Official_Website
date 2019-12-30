@@ -43,7 +43,7 @@ class SlideShow extends Component {
             className: "center",
             centerMode: true,
             infinite: true,
-            centerPadding: "120spx",
+            centerPadding: "125spx",
             infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,
