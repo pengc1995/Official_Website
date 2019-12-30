@@ -132,8 +132,12 @@ class  ADForm  extends  React.Component    {
                             }}
                 >
                     <option value="Greater Vancouver">Greater Vancouver</option>
-                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="Calgary">Calgary</option>
+                    <option value="Edmonton">Edmonton</option> 
+                    <option value="Montreal">Montreal</option>
                     <option value="Toronto">Toronto</option> 
+                    <option value="Seattle">Seattle</option>
+                    <option value="New York">New York</option>
                 </select>
                 <br />
                 
