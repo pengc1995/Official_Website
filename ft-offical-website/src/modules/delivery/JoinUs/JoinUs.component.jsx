@@ -3,7 +3,7 @@ import VerificationCode from '../verificationcode/verification/verification.comp
 import AreaCheckBox from './areacheckbox.component';
 import ReactValidator from './react-validator';
 import SuccessModal from '../../home/recruitment/component/successModal/successModal.component';
-import { Input, Checkbox, Row, Col } from 'antd';
+import { Input, Checkbox } from 'antd';
 import axios from 'axios';
 
 import './JoinUs.component.style.css';
@@ -274,7 +274,7 @@ class JoinUs extends React.Component  {
 
     onChange = DesiredArea => {
         this.setState({
-            DesiredArea,
+          DesiredArea,
         });
       };
 
@@ -355,12 +355,17 @@ class JoinUs extends React.Component  {
                         <span className='ft_driver_label'><FormattedMessage id="fd_deliver_become_schedule_title"/></span><span className='ft_required_mark'>*</span>
                         <span className='ft_driver_instruction'>Choose at least 1</span>
                         <div className='ft_driver_area_checkbox_group'>
+                            {/* {
+                                this.state.Town.map(data => (
+                                    <AreaCheckBox name='DesiredArea' locationValue={data} getArea={this.GetAreaStageChange} />
+                                ))
+                            } */}
                             <CheckboxGroup
-                                style={{'max-width':'463px', margin:'auto','display':'flex', 'justify-content': 'space-between', 'flex-wrap': 'wrap'}}
                                 options={this.state.Town}
                                 value={this.state.DesiredArea}
                                 onChange={this.onChange}
                             >
+
                             </CheckboxGroup>
                             </div>
                         {this.validator.message('DesiredArea', this.state.DesiredArea, 'min:1','',{
